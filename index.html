@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FitFlow - Prototypes Portal</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'DM Sans', sans-serif;
+            background-color: #0f0f11;
+            color: white;
+        }
+
+        .glass {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+        }
+
+        .glass:hover {
+            background: rgba(255, 255, 255, 0.06);
+            border-color: rgba(255, 255, 255, 0.1);
+            transform: translateY(-4px);
+        }
+    </style>
+</head>
+
+<body class="min-h-screen flex flex-col justify-center items-center p-8 relative overflow-hidden">
+
+    <!-- Background Glow -->
+    <div
+        class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[#22C55E]/10 rounded-full blur-[120px] pointer-events-none">
+    </div>
+
+    <div class="relative z-10 text-center mb-16 max-w-2xl">
+        <div class="inline-flex items-center gap-3 mb-6">
+            <div
+                class="w-12 h-12 rounded-xl bg-[#22C55E] flex items-center justify-center text-black shadow-lg shadow-[#22C55E]/20">
+                <iconify-icon icon="solar:dumbbell-large-bold-duotone" width="28"></iconify-icon>
+            </div>
+            <h1 class="text-4xl font-bold tracking-tight">FitFlow</h1>
+        </div>
+        <p class="text-lg text-slate-400">High-fidelity HTML prototypes for the comprehensive fitness management
+            ecosystem.</p>
+    </div>
+
+    <!-- Cards Grid -->
+    <div class="grid md:grid-cols-3 gap-6 max-w-6xl w-full relative z-10">
+
+        <!-- User App -->
+        <a href="FitFlow/HTML/User-App/splash.html" class="glass rounded-3xl p-8 transition-all duration-300 group">
+            <div
+                class="w-16 h-16 rounded-full bg-blue-500/10 text-blue-500 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                <iconify-icon icon="solar:smartphone-line-duotone" width="32"></iconify-icon>
+            </div>
+            <h2 class="text-2xl font-bold mb-2">User App</h2>
+            <p class="text-sm text-slate-400 mb-8">Mobile-first experience for gym members to book classes, track
+                workouts, and manage membership.</p>
+            <div class="flex items-center gap-2 text-blue-500 font-bold text-sm">
+                Launch Prototype <iconify-icon icon="solar:arrow-right-linear"
+                    class="group-hover:translate-x-1 transition-transform"></iconify-icon>
+            </div>
+        </a>
+
+        <!-- Trainer App -->
+        <a href="FitFlow/HTML/Trainer-App/trainer-home.html"
+            class="glass rounded-3xl p-8 transition-all duration-300 group">
+            <div
+                class="w-16 h-16 rounded-full bg-orange-500/10 text-orange-500 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                <iconify-icon icon="solar:user-id-linear" width="32"></iconify-icon>
+            </div>
+            <h2 class="text-2xl font-bold mb-2">Trainer App</h2>
+            <p class="text-sm text-slate-400 mb-8">Dedicated interface for coaches to manage clients, build programs,
+                and track schedule.</p>
+            <div class="flex items-center gap-2 text-orange-500 font-bold text-sm">
+                Launch Prototype <iconify-icon icon="solar:arrow-right-linear"
+                    class="group-hover:translate-x-1 transition-transform"></iconify-icon>
+            </div>
+        </a>
+
+        <!-- Admin Dashboard -->
+        <a href="FitFlow/HTML/Admin/admin-dashboard.html"
+            class="glass rounded-3xl p-8 transition-all duration-300 group">
+            <div
+                class="w-16 h-16 rounded-full bg-[#22C55E]/10 text-[#22C55E] flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                <iconify-icon icon="solar:laptop-minimalistic-linear" width="32"></iconify-icon>
+            </div>
+            <h2 class="text-2xl font-bold mb-2">Admin Portal</h2>
+            <p class="text-sm text-slate-400 mb-8">Desktop dashboard for facility management, user roles, CMS, and
+                financial reporting.</p>
+            <div class="flex items-center gap-2 text-[#22C55E] font-bold text-sm">
+                Launch Dashboard <iconify-icon icon="solar:arrow-right-linear"
+                    class="group-hover:translate-x-1 transition-transform"></iconify-icon>
+            </div>
+        </a>
+
+    </div>
+
+    <footer class="mt-16 text-xs text-slate-600">
+        &copy; 2026 FitFlow Inc. All rights reserved.
+    </footer>
+
+</body>
+
+</html>
