@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FitFlow Admin - Content CMS</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=DM+Sans:wght@400;500;700&display=swap"
+        rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        .font-dm-sans {
+            font-family: 'DM Sans', sans-serif !important;
+        }
+    </style>
+</head>
+
+<body class="bg-[#0f0f11] text-slate-300 font-inter h-screen flex overflow-hidden">
+
+    <!-- Sidebar -->
+    <aside class="w-64 bg-[#1a1a1a] border-r border-white/5 flex flex-col h-full">
+        <!-- Logo -->
+        <div class="h-16 flex items-center px-6 border-b border-white/5">
+            <div class="flex items-center gap-2 text-[#22C55E]">
+                <iconify-icon icon="solar:dumbbell-large-minimalistic-bold" width="24"></iconify-icon>
+                <span class="font-dm-sans font-bold text-xl text-white tracking-tight">FitFlow</span>
+            </div>
+        </div>
+
+        <nav class="flex-1 px-3 py-6 space-y-1">
+            <a href="admin-dashboard.html"
+                class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-400 hover:text-white hover:bg-white/5 transition-colors">
+                <iconify-icon icon="solar:widget-linear" width="20"></iconify-icon>
+                Dashboard
+            </a>
+            <div class="pt-4 pb-2 px-3 text-[10px] font-bold text-slate-500 uppercase tracking-wider">Management</div>
+            <a href="users.html"
+                class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-400 hover:text-white hover:bg-white/5 transition-colors">
+                <iconify-icon icon="solar:users-group-rounded-linear" width="20"></iconify-icon>
+                Users & Roles
+            </a>
+            <a href="facility.html"
+                class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-400 hover:text-white hover:bg-white/5 transition-colors">
+                <iconify-icon icon="solar:buildings-linear" width="20"></iconify-icon>
+                Facility
+            </a>
+            <div class="pt-4 pb-2 px-3 text-[10px] font-bold text-slate-500 uppercase tracking-wider">Content</div>
+            <a href="content-cms.html"
+                class="flex items-center gap-3 px-3 py-2.5 rounded-lg bg-[#22C55E]/10 text-[#22C55E] font-medium transition-colors">
+                <iconify-icon icon="solar:library-linear" width="20"></iconify-icon>
+                Content CMS
+            </a>
+            <div class="pt-4 pb-2 px-3 text-[10px] font-bold text-slate-500 uppercase tracking-wider">Analytics</div>
+            <a href="reports.html"
+                class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-400 hover:text-white hover:bg-white/5 transition-colors">
+                <iconify-icon icon="solar:chart-square-linear" width="20"></iconify-icon>
+                Reports
+            </a>
+        </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="flex-1 flex flex-col overflow-hidden">
+
+        <!-- Top Bar -->
+        <header class="h-16 border-b border-white/5 bg-[#0f0f11] flex items-center justify-between px-8">
+            <h1 class="text-xl font-bold text-white font-dm-sans">Content Management</h1>
+            <div class="flex items-center gap-4">
+                <button
+                    class="bg-[#22C55E] text-[#0f0f11] px-4 py-2 rounded-lg text-sm font-bold flex items-center gap-2 hover:bg-[#16a34a] transition-colors">
+                    <iconify-icon icon="solar:add-circle-bold" width="16"></iconify-icon>
+                    Upload Video
+                </button>
+            </div>
+        </header>
+
+        <!-- Tabs -->
+        <div class="px-8 pt-6">
+            <div class="flex gap-4 border-b border-white/5">
+                <button class="pb-3 text-white border-b-2 border-[#22C55E] font-medium text-sm">Video Library</button>
+                <button class="pb-3 text-slate-500 hover:text-white font-medium text-sm transition-colors">Articles /
+                    Blog</button>
+                <button class="pb-3 text-slate-500 hover:text-white font-medium text-sm transition-colors">Nutrition
+                    Plans</button>
+            </div>
+        </div>
+
+        <div class="flex-1 overflow-y-auto p-8">
+
+            <!-- Filters -->
+            <div class="flex items-center gap-4 mb-6">
+                <input type="text" placeholder="Search content..."
+                    class="bg-[#1a1a1a] text-sm text-white px-4 py-2.5 rounded-lg border border-white/5 focus:outline-none focus:border-[#22C55E] w-64">
+                <select
+                    class="bg-[#1a1a1a] text-sm text-white px-4 py-2.5 rounded-lg border border-white/5 outline-none focus:border-[#22C55E]">
+                    <option>All Categories</option>
+                    <option>Strength</option>
+                    <option>Cardio</option>
+                    <option>Yoga</option>
+                </select>
+            </div>
+
+            <!-- Content Grid -->
+            <div class="grid grid-cols-4 gap-6">
+
+                <!-- Card -->
+                <div
+                    class="bg-[#1a1a1a] rounded-2xl border border-white/5 overflow-hidden group hover:border-white/20 transition-colors cursor-pointer">
+                    <div class="aspect-video bg-[#252525] relative">
+                        <!-- Thumbnail Placeholder -->
+                        <div class="absolute inset-0 flex items-center justify-center text-slate-600">
+                            <iconify-icon icon="solar:play-circle-linear" width="40"></iconify-icon>
+                        </div>
+                        <div class="absolute bottom-2 right-2 bg-black/80 text-white text-[10px] px-1.5 py-0.5 rounded">
+                            12:30</div>
+                    </div>
+                    <div class="p-4">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-sm font-bold text-white line-clamp-1">Advanced Deadlift Tech...</h3>
+                            <button><iconify-icon icon="solar:menu-dots-bold"
+                                    class="text-slate-500 hover:text-white"></iconify-icon></button>
+                        </div>
+                        <div class="flex items-center justify-between text-xs text-slate-500">
+                            <span>Strength</span>
+                            <span>2.4k views</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card -->
+                <div
+                    class="bg-[#1a1a1a] rounded-2xl border border-white/5 overflow-hidden group hover:border-white/20 transition-colors cursor-pointer">
+                    <div class="aspect-video bg-[#252525] relative">
+                        <div class="absolute inset-0 flex items-center justify-center text-slate-600">
+                            <iconify-icon icon="solar:play-circle-linear" width="40"></iconify-icon>
+                        </div>
+                        <div class="absolute bottom-2 right-2 bg-black/80 text-white text-[10px] px-1.5 py-0.5 rounded">
+                            45:00</div>
+                    </div>
+                    <div class="p-4">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-sm font-bold text-white line-clamp-1">Full Body HIIT</h3>
+                            <button><iconify-icon icon="solar:menu-dots-bold"
+                                    class="text-slate-500 hover:text-white"></iconify-icon></button>
+                        </div>
+                        <div class="flex items-center justify-between text-xs text-slate-500">
+                            <span>Cardio</span>
+                            <span class="text-[#22C55E]">Premium</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card -->
+                <div
+                    class="bg-[#1a1a1a] rounded-2xl border border-white/5 overflow-hidden group hover:border-white/20 transition-colors cursor-pointer">
+                    <div class="aspect-video bg-[#252525] relative">
+                        <div class="absolute inset-0 flex items-center justify-center text-slate-600">
+                            <iconify-icon icon="solar:play-circle-linear" width="40"></iconify-icon>
+                        </div>
+                        <div class="absolute bottom-2 right-2 bg-black/80 text-white text-[10px] px-1.5 py-0.5 rounded">
+                            20:15</div>
+                    </div>
+                    <div class="p-4">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-sm font-bold text-white line-clamp-1">Morning Mobility</h3>
+                            <button><iconify-icon icon="solar:menu-dots-bold"
+                                    class="text-slate-500 hover:text-white"></iconify-icon></button>
+                        </div>
+                        <div class="flex items-center justify-between text-xs text-slate-500">
+                            <span>Recovery</span>
+                            <span>800 views</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </main>
+
+</body>
+
+</html>

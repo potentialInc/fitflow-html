@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FitFlow - Workout Plan</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=DM+Sans:wght@400;500;700&display=swap"
+        rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        .font-dm-sans {
+            font-family: 'DM Sans', sans-serif !important;
+        }
+    </style>
+</head>
+
+<body class="bg-[#0f0f11] text-slate-300 min-h-screen pb-24">
+
+    <!-- Mobile Container -->
+    <div class="w-full max-w-[402px] mx-auto bg-[#0f0f11] min-h-screen relative px-6 py-8">
+
+        <!-- Header -->
+        <div class="flex items-center justify-between mb-8">
+            <a href="workouts.html"
+                class="w-10 h-10 rounded-full bg-[#1a1a1a] flex items-center justify-center text-slate-400 hover:text-white transition-colors">
+                <iconify-icon icon="solar:arrow-left-linear" width="24"></iconify-icon>
+            </a>
+            <h1 class="text-lg font-dm-sans font-bold text-white">Plan Details</h1>
+            <div class="w-10"></div>
+        </div>
+
+        <!-- Plan Info -->
+        <div class="mb-8 text-center">
+            <span class="text-xs font-bold text-slate-500 uppercase tracking-widest mb-2 block">Hypertrophy • Phase
+                1</span>
+            <h2 class="text-3xl font-dm-sans font-bold text-white mb-2">Build & Burn</h2>
+            <div class="flex items-center justify-center gap-2 text-sm text-slate-400">
+                <span>8 Weeks</span>
+                <span>•</span>
+                <span>4 days/week</span>
+            </div>
+
+            <div class="mt-4 flex items-center justify-center gap-2">
+                <img src="https://randomuser.me/api/portraits/men/32.jpg"
+                    class="w-6 h-6 rounded-full border border-white/10">
+                <span class="text-xs font-medium text-slate-300">Created by <span class="text-white font-bold">Alex
+                        R.</span></span>
+            </div>
+        </div>
+
+        <!-- Schedule List -->
+        <main class="space-y-4">
+
+            <h3 class="text-sm font-bold text-white font-dm-sans">Weekly Schedule</h3>
+
+            <!-- Day Item -->
+            <div
+                class="bg-[#1a1a1a] p-4 rounded-2xl border border-white/5 flex items-center gap-4 hover:bg-[#252525] transition-colors cursor-pointer group">
+                <div
+                    class="w-10 h-10 rounded-full bg-[#22C55E]/10 text-[#22C55E] flex items-center justify-center font-bold font-dm-sans text-sm">
+                    1
+                </div>
+                <div class="flex-1">
+                    <h4 class="text-base font-bold text-white">Chest & Triceps</h4>
+                    <p class="text-xs text-slate-400">5 Exercises • 45 min</p>
+                </div>
+                <iconify-icon icon="solar:alt-arrow-right-linear"
+                    class="text-slate-500 group-hover:text-white transition-colors"></iconify-icon>
+            </div>
+
+            <!-- Day Item -->
+            <div
+                class="bg-[#1a1a1a] p-4 rounded-2xl border border-white/5 flex items-center gap-4 hover:bg-[#252525] transition-colors cursor-pointer group">
+                <div
+                    class="w-10 h-10 rounded-full bg-[#1a1a1a] border border-white/10 text-slate-400 flex items-center justify-center font-bold font-dm-sans text-sm">
+                    2
+                </div>
+                <div class="flex-1">
+                    <h4 class="text-base font-bold text-white">Back & Biceps</h4>
+                    <p class="text-xs text-slate-400">6 Exercises • 50 min</p>
+                </div>
+                <iconify-icon icon="solar:alt-arrow-right-linear"
+                    class="text-slate-500 group-hover:text-white transition-colors"></iconify-icon>
+            </div>
+
+            <!-- Day Item -->
+            <div
+                class="bg-[#1a1a1a] p-4 rounded-2xl border border-white/5 flex items-center gap-4 hover:bg-[#252525] transition-colors cursor-pointer group">
+                <div
+                    class="w-10 h-10 rounded-full bg-[#1a1a1a] border border-white/10 text-slate-400 flex items-center justify-center font-bold font-dm-sans text-sm">
+                    3
+                </div>
+                <div class="flex-1">
+                    <h4 class="text-base font-bold text-white">Rest / Recovery</h4>
+                    <p class="text-xs text-slate-400">Stretching • 20 min</p>
+                </div>
+                <iconify-icon icon="solar:alt-arrow-right-linear"
+                    class="text-slate-500 group-hover:text-white transition-colors"></iconify-icon>
+            </div>
+
+        </main>
+
+    </div>
+
+</body>
+
+</html>

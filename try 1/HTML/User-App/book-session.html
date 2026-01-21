@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FitFlow - Book Session</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <link rel="stylesheet" href="https://npmcdn.com/flatpickr/dist/themes/dark.css">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        .font-dm-sans {
+            font-family: 'DM Sans', sans-serif !important;
+        }
+
+        /* Override flatpickr for design system */
+        .flatpickr-calendar {
+            background: #1a1a1a !important;
+            border: 1px solid #333 !important;
+            border-radius: 1.5rem !important;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4) !important;
+        }
+
+        .flatpickr-day.selected {
+            background: #FACC15 !important;
+            border-color: #FACC15 !important;
+            color: #000 !important;
+        }
+    </style>
+</head>
+
+<body class="bg-neutral-950 text-slate-300 min-h-screen flex justify-center">
+
+    <div class="w-full max-w-[402px] bg-[#0f0f11] min-h-screen relative shadow-2xl py-6 px-6 pb-24">
+
+        <header class="flex items-center gap-4 mb-8">
+            <a href="trainer-profile.html"
+                class="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center text-white hover:bg-white/5 transition-colors">
+                <iconify-icon icon="solar:arrow-left-linear" width="20"></iconify-icon>
+            </a>
+            <h1 class="text-xl font-dm-sans text-white">Book Session</h1>
+        </header>
+
+        <main class="space-y-8 pb-24">
+
+            <!-- Date Selection -->
+            <div class="space-y-3">
+                <h2 class="text-lg font-dm-sans text-white">Select Date</h2>
+                <input type="text" id="datepicker"
+                    class="w-full bg-white/5 border border-white/10 rounded-full px-6 py-4 text-white focus:outline-none focus:border-[#FACC15]"
+                    placeholder="Tap to pick date">
+            </div>
+
+            <!-- Time Slots -->
+            <div class="space-y-3">
+                <h2 class="text-lg font-dm-sans text-white">Available Times</h2>
+                <div class="grid grid-cols-3 gap-3">
+                    <button
+                        class="bg-[#FACC15] text-neutral-900 border border-[#FACC15] py-3 rounded-full text-sm font-medium">09:00
+                        AM</button>
+                    <button
+                        class="bg-white/5 text-slate-400 border border-white/10 py-3 rounded-full text-sm font-medium hover:bg-white/10">10:00
+                        AM</button>
+                    <button
+                        class="bg-white/5 text-slate-400 border border-white/10 py-3 rounded-full text-sm font-medium hover:bg-white/10">11:00
+                        AM</button>
+                    <button
+                        class="bg-white/5 text-slate-400 border border-white/10 py-3 rounded-full text-sm font-medium hover:bg-white/10">02:00
+                        PM</button>
+                    <button
+                        class="bg-white/5 text-slate-400 border border-white/10 py-3 rounded-full text-sm font-medium hover:bg-white/10">03:00
+                        PM</button>
+                </div>
+            </div>
+
+            <!-- Summary Card -->
+            <div class="bg-neutral-900 border border-white/5 rounded-[2rem] p-6 space-y-4">
+                <h3 class="text-white font-medium">Payment Summary</h3>
+
+                <div class="flex justify-between text-sm">
+                    <span class="text-slate-400">Session (1h)</span>
+                    <span class="text-white">$50.00</span>
+                </div>
+                <div class="flex justify-between text-sm">
+                    <span class="text-slate-400">Service Fee</span>
+                    <span class="text-white">$2.50</span>
+                </div>
+                <div class="border-t border-white/5 pt-4 flex justify-between items-center">
+                    <span class="text-white font-medium">Total</span>
+                    <span class="text-2xl font-dm-sans text-[#FACC15]">$52.50</span>
+                </div>
+
+                <!-- Balance Warning Mockup -->
+                <div class="bg-red-500/10 border border-red-500/20 rounded-xl p-3 flex gap-3 items-start">
+                    <iconify-icon icon="solar:info-circle-linear" class="text-red-400 mt-0.5" width="16"></iconify-icon>
+                    <p class="text-xs text-red-200">Insufficient package balance. You will be charged directly.</p>
+                </div>
+            </div>
+
+        </main>
+
+        <!-- Bottom Action -->
+        <div
+            class="fixed bottom-0 left-1/2 -translate-x-1/2 w-full max-w-[402px] p-6 bg-[#0f0f11] border-t border-white/10 z-50">
+            <button
+                class="w-full bg-[#FACC15] hover:bg-[#FACC15]/90 text-neutral-900 py-4 rounded-full font-medium shadow-lg shadow-yellow-500/10 transition-colors flex items-center justify-center gap-2">
+                Confirm & Pay <iconify-icon icon="solar:card-send-linear" width="20"></iconify-icon>
+            </button>
+        </div>
+
+        <script>
+            flatpickr("#datepicker", {
+                dateFormat: "F j, Y",
+                defaultDate: "today",
+                theme: "dark"
+            });
+        </script>
+    </div>
+</body>
+
+</html>

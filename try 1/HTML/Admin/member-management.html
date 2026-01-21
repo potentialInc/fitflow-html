@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FitFlow Admin - Member Management</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        .font-dm-sans {
+            font-family: 'DM Sans', sans-serif !important;
+        }
+    </style>
+</head>
+
+<body class="bg-[#0f0f11] text-slate-300 min-h-screen flex">
+
+    <!-- Sidebar -->
+    <aside class="w-64 bg-neutral-900 border-r border-white/5 flex flex-col fixed inset-y-0">
+        <div class="p-6 flex items-center gap-2">
+            <iconify-icon icon="solar:graph-up-linear" width="28" class="text-[#FACC15]"></iconify-icon>
+            <span class="text-xl font-dm-sans text-white">FitFlow Admin</span>
+        </div>
+
+        <nav class="flex-1 px-4 space-y-1">
+            <a href="dashboard.html"
+                class="flex items-center gap-3 px-4 py-3 text-slate-400 hover:text-white hover:bg-white/5 rounded-xl transition-colors">
+                <iconify-icon icon="solar:widget-linear" width="20"></iconify-icon> Dashboard
+            </a>
+            <a href="member-management.html"
+                class="flex items-center gap-3 px-4 py-3 bg-[#FACC15] text-neutral-900 rounded-xl font-medium">
+                <iconify-icon icon="solar:users-group-rounded-linear" width="20"></iconify-icon> Members
+            </a>
+            <a href="class-management.html"
+                class="flex items-center gap-3 px-4 py-3 text-slate-400 hover:text-white hover:bg-white/5 rounded-xl transition-colors">
+                <iconify-icon icon="solar:calendar-linear" width="20"></iconify-icon> Classes
+            </a>
+            <a href="revenue.html"
+                class="flex items-center gap-3 px-4 py-3 text-slate-400 hover:text-white hover:bg-white/5 rounded-xl transition-colors">
+                <iconify-icon icon="solar:wallet-linear" width="20"></iconify-icon> Revenue
+            </a>
+            <a href="facility-log.html"
+                class="flex items-center gap-3 px-4 py-3 text-slate-400 hover:text-white hover:bg-white/5 rounded-xl transition-colors">
+                <iconify-icon icon="solar:login-2-linear" width="20"></iconify-icon> Check-ins
+            </a>
+        </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="ml-64 flex-1 p-8">
+
+        <header class="flex justify-between items-center mb-8">
+            <div>
+                <h1 class="text-3xl font-dm-sans text-white font-light">Members</h1>
+                <p class="text-slate-500 text-sm">Manage users and subscriptions</p>
+            </div>
+            <button
+                class="bg-[#FACC15] text-neutral-900 px-6 py-3 rounded-full text-sm font-medium hover:bg-yellow-400 flex items-center gap-2">
+                <iconify-icon icon="solar:add-circle-bold"></iconify-icon> Add Member
+            </button>
+        </header>
+
+        <!-- Filters -->
+        <div class="flex gap-4 mb-6">
+            <div class="relative flex-1 max-w-md">
+                <iconify-icon icon="solar:magnifer-linear"
+                    class="absolute left-4 top-1/2 -translate-y-1/2 text-slate-500"></iconify-icon>
+                <input type="text" placeholder="Search by name, email..."
+                    class="w-full bg-neutral-900 border border-white/10 rounded-full pl-10 pr-6 py-3 text-white focus:outline-none focus:border-[#FACC15]">
+            </div>
+            <select class="bg-neutral-900 border border-white/10 rounded-full px-6 py-3 text-slate-300">
+                <option>All Status</option>
+                <option>Active</option>
+                <option>Expired</option>
+            </select>
+        </div>
+
+        <!-- Table -->
+        <div class="bg-neutral-900 border border-white/5 rounded-[2rem] overflow-hidden">
+            <table class="w-full text-left">
+                <thead class="bg-white/5 text-slate-400 text-xs uppercase font-medium">
+                    <tr>
+                        <th class="p-6">Name</th>
+                        <th class="p-6">Membership</th>
+                        <th class="p-6">Status</th>
+                        <th class="p-6">Join Date</th>
+                        <th class="p-6 text-right">Actions</th>
+                    </tr>
+                </thead>
+                <tbody class="divide-y divide-white/5">
+                    <!-- Row 1 -->
+                    <tr class="hover:bg-white/5 transition-colors group">
+                        <td class="p-6 flex items-center gap-3">
+                            <img src="https://randomuser.me/api/portraits/women/44.jpg" class="w-10 h-10 rounded-full">
+                            <div>
+                                <p class="text-white font-medium">Sarah Connor</p>
+                                <p class="text-xs text-slate-500">sarah@example.com</p>
+                            </div>
+                        </td>
+                        <td class="p-6">
+                            <span
+                                class="bg-[#FACC15]/10 text-[#FACC15] px-3 py-1 rounded-full text-xs font-bold">Premium</span>
+                        </td>
+                        <td class="p-6">
+                            <div class="flex items-center gap-2 text-green-500 text-sm">
+                                <div class="w-2 h-2 bg-green-500 rounded-full"></div> Active
+                            </div>
+                        </td>
+                        <td class="p-6 text-slate-400 text-sm">Jan 12, 2024</td>
+                        <td class="p-6 text-right">
+                            <button class="text-slate-500 hover:text-white p-2"><iconify-icon icon="solar:pen-linear"
+                                    width="18"></iconify-icon></button>
+                            <button class="text-slate-500 hover:text-red-400 p-2"><iconify-icon
+                                    icon="solar:trash-bin-linear" width="18"></iconify-icon></button>
+                        </td>
+                    </tr>
+                    <!-- Row 2 -->
+                    <tr class="hover:bg-white/5 transition-colors group">
+                        <td class="p-6 flex items-center gap-3">
+                            <img src="https://randomuser.me/api/portraits/men/32.jpg" class="w-10 h-10 rounded-full">
+                            <div>
+                                <p class="text-white font-medium">David Chen</p>
+                                <p class="text-xs text-slate-500">david@example.com</p>
+                            </div>
+                        </td>
+                        <td class="p-6">
+                            <span
+                                class="bg-white/10 text-slate-300 px-3 py-1 rounded-full text-xs font-bold">Basic</span>
+                        </td>
+                        <td class="p-6">
+                            <div class="flex items-center gap-2 text-green-500 text-sm">
+                                <div class="w-2 h-2 bg-green-500 rounded-full"></div> Active
+                            </div>
+                        </td>
+                        <td class="p-6 text-slate-400 text-sm">Jan 10, 2024</td>
+                        <td class="p-6 text-right">
+                            <button class="text-slate-500 hover:text-white p-2"><iconify-icon icon="solar:pen-linear"
+                                    width="18"></iconify-icon></button>
+                            <button class="text-slate-500 hover:text-red-400 p-2"><iconify-icon
+                                    icon="solar:trash-bin-linear" width="18"></iconify-icon></button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <!-- Pagination -->
+            <div class="p-6 border-t border-white/5 flex justify-between items-center text-sm text-slate-500">
+                <span>Showing 1-10 of 1,240</span>
+                <div class="flex gap-2">
+                    <button class="px-3 py-1 hover:text-white">Previous</button>
+                    <button class="px-3 py-1 text-white bg-white/10 rounded-lg">1</button>
+                    <button class="px-3 py-1 hover:text-white">2</button>
+                    <button class="px-3 py-1 hover:text-white">Next</button>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+</body>
+
+</html>

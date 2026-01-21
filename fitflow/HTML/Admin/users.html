@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FitFlow Admin - Users</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=DM+Sans:wght@400;500;700&display=swap"
+        rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        .font-dm-sans {
+            font-family: 'DM Sans', sans-serif !important;
+        }
+    </style>
+</head>
+
+<body class="bg-[#0f0f11] text-slate-300 font-inter h-screen flex overflow-hidden">
+
+    <!-- Sidebar -->
+    <aside class="w-64 bg-[#1a1a1a] border-r border-white/5 flex flex-col h-full">
+        <!-- Logo -->
+        <div class="h-16 flex items-center px-6 border-b border-white/5">
+            <div class="flex items-center gap-2 text-[#22C55E]">
+                <iconify-icon icon="solar:dumbbell-large-minimalistic-bold" width="24"></iconify-icon>
+                <span class="font-dm-sans font-bold text-xl text-white tracking-tight">FitFlow</span>
+            </div>
+        </div>
+
+        <!-- Nav -->
+        <nav class="flex-1 px-3 py-6 space-y-1">
+            <a href="admin-dashboard.html"
+                class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-400 hover:text-white hover:bg-white/5 transition-colors">
+                <iconify-icon icon="solar:widget-linear" width="20"></iconify-icon>
+                Dashboard
+            </a>
+            <div class="pt-4 pb-2 px-3 text-[10px] font-bold text-slate-500 uppercase tracking-wider">Management</div>
+            <a href="users.html"
+                class="flex items-center gap-3 px-3 py-2.5 rounded-lg bg-[#22C55E]/10 text-[#22C55E] font-medium transition-colors">
+                <iconify-icon icon="solar:users-group-rounded-linear" width="20"></iconify-icon>
+                Users & Roles
+            </a>
+            <a href="facility.html"
+                class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-400 hover:text-white hover:bg-white/5 transition-colors">
+                <iconify-icon icon="solar:buildings-linear" width="20"></iconify-icon>
+                Facility
+            </a>
+            <div class="pt-4 pb-2 px-3 text-[10px] font-bold text-slate-500 uppercase tracking-wider">Content</div>
+            <a href="content-cms.html"
+                class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-400 hover:text-white hover:bg-white/5 transition-colors">
+                <iconify-icon icon="solar:library-linear" width="20"></iconify-icon>
+                Content CMS
+            </a>
+            <div class="pt-4 pb-2 px-3 text-[10px] font-bold text-slate-500 uppercase tracking-wider">Analytics</div>
+            <a href="reports.html"
+                class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-400 hover:text-white hover:bg-white/5 transition-colors">
+                <iconify-icon icon="solar:chart-square-linear" width="20"></iconify-icon>
+                Reports
+            </a>
+        </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="flex-1 flex flex-col overflow-hidden">
+
+        <!-- Top Bar -->
+        <header class="h-16 border-b border-white/5 bg-[#0f0f11] flex items-center justify-between px-8">
+            <h1 class="text-xl font-bold text-white font-dm-sans">User Management</h1>
+            <div class="flex items-center gap-4">
+                <button onclick="document.getElementById('addUserModal').classList.remove('hidden')"
+                    class="bg-[#22C55E] text-[#0f0f11] px-4 py-2 rounded-lg text-sm font-bold flex items-center gap-2 hover:bg-[#16a34a] transition-colors">
+                    <iconify-icon icon="solar:user-plus-bold" width="16"></iconify-icon>
+                    Add User
+                </button>
+            </div>
+        </header>
+
+        <!-- Tool Bar -->
+        <div class="px-8 py-6 flex items-center justify-between">
+
+            <div class="flex gap-2">
+                <div class="relative">
+                    <iconify-icon icon="solar:magnifer-linear"
+                        class="absolute left-3 top-1/2 -translate-y-1/2 text-slate-500"></iconify-icon>
+                    <input type="text" placeholder="Search users..."
+                        class="bg-[#1a1a1a] text-sm text-white pl-9 pr-4 py-2.5 rounded-lg border border-white/5 focus:outline-none focus:border-[#22C55E] w-72">
+                </div>
+
+                <select
+                    class="bg-[#1a1a1a] text-sm text-white px-4 py-2.5 rounded-lg border border-white/5 outline-none focus:border-[#22C55E]">
+                    <option>All Roles</option>
+                    <option>Member</option>
+                    <option>Trainer</option>
+                    <option>Admin</option>
+                </select>
+
+                <select
+                    class="bg-[#1a1a1a] text-sm text-white px-4 py-2.5 rounded-lg border border-white/5 outline-none focus:border-[#22C55E]">
+                    <option>Any Status</option>
+                    <option>Active</option>
+                    <option>Inactive</option>
+                    <option>Banned</option>
+                </select>
+            </div>
+
+            <div class="flex items-center gap-2 text-sm text-slate-500">
+                <span>Showing 1-10 of 1,204 results</span>
+                <div class="flex gap-1 ml-2">
+                    <button
+                        class="w-8 h-8 rounded border border-white/10 flex items-center justify-center hover:bg-white/5"><iconify-icon
+                            icon="solar:alt-arrow-left-linear"></iconify-icon></button>
+                    <button
+                        class="w-8 h-8 rounded border border-white/10 flex items-center justify-center hover:bg-white/5"><iconify-icon
+                            icon="solar:alt-arrow-right-linear"></iconify-icon></button>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Table -->
+        <div class="flex-1 overflow-y-auto px-8 pb-8">
+            <div class="bg-[#1a1a1a] rounded-2xl border border-white/5 overflow-hidden">
+                <table class="w-full text-left text-sm text-slate-400">
+                    <thead class="bg-black/20 text-xs uppercase font-bold text-slate-500">
+                        <tr>
+                            <th class="px-6 py-4 w-12"><input type="checkbox"
+                                    class="rounded border-slate-600 bg-transparent text-[#22C55E] focus:ring-0"></th>
+                            <th class="px-6 py-4">User Info</th>
+                            <th class="px-6 py-4">Role</th>
+                            <th class="px-6 py-4">Membership</th>
+                            <th class="px-6 py-4">Last Active</th>
+                            <th class="px-6 py-4">Status</th>
+                            <th class="px-6 py-4 text-right">Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-white/5">
+
+                        <!-- Row -->
+                        <tr class="hover:bg-white/5 transition-colors group">
+                            <td class="px-6 py-4"><input type="checkbox"
+                                    class="rounded border-slate-600 bg-transparent text-[#22C55E] focus:ring-0"></td>
+                            <td class="px-6 py-4">
+                                <div class="flex items-center gap-3">
+                                    <div class="w-9 h-9 rounded-full bg-slate-700"></div>
+                                    <div>
+                                        <p class="text-white font-bold">Sarah Jenkins</p>
+                                        <p class="text-xs text-slate-500">sarah.j@example.com</p>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="px-6 py-4"><span
+                                    class="bg-slate-700/30 text-slate-300 px-2 py-0.5 rounded text-xs font-bold border border-white/5">Member</span>
+                            </td>
+                            <td class="px-6 py-4">Premium (Monthly)</td>
+                            <td class="px-6 py-4">2 hours ago</td>
+                            <td class="px-6 py-4"><span
+                                    class="bg-[#22C55E]/10 text-[#22C55E] px-2 py-0.5 rounded text-xs font-bold uppercase">Active</span>
+                            </td>
+                            <td class="px-6 py-4 text-right">
+                                <button class="text-slate-500 hover:text-white"><iconify-icon
+                                        icon="solar:menu-dots-bold" width="20"></iconify-icon></button>
+                            </td>
+                        </tr>
+
+                        <!-- Row -->
+                        <tr class="hover:bg-white/5 transition-colors group">
+                            <td class="px-6 py-4"><input type="checkbox"
+                                    class="rounded border-slate-600 bg-transparent text-[#22C55E] focus:ring-0"></td>
+                            <td class="px-6 py-4">
+                                <div class="flex items-center gap-3">
+                                    <div class="w-9 h-9 rounded-full bg-slate-700"></div>
+                                    <div>
+                                        <p class="text-white font-bold">Alex Richardson</p>
+                                        <p class="text-xs text-slate-500">alex.r@fitflow.com</p>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="px-6 py-4"><span
+                                    class="bg-blue-500/20 text-blue-400 px-2 py-0.5 rounded text-xs font-bold border border-blue-500/20">Trainer</span>
+                            </td>
+                            <td class="px-6 py-4">-</td>
+                            <td class="px-6 py-4">10 mins ago</td>
+                            <td class="px-6 py-4"><span
+                                    class="bg-[#22C55E]/10 text-[#22C55E] px-2 py-0.5 rounded text-xs font-bold uppercase">Active</span>
+                            </td>
+                            <td class="px-6 py-4 text-right">
+                                <button class="text-slate-500 hover:text-white"><iconify-icon
+                                        icon="solar:menu-dots-bold" width="20"></iconify-icon></button>
+                            </td>
+                        </tr>
+
+                        <!-- Row -->
+                        <tr class="hover:bg-white/5 transition-colors group">
+                            <td class="px-6 py-4"><input type="checkbox"
+                                    class="rounded border-slate-600 bg-transparent text-[#22C55E] focus:ring-0"></td>
+                            <td class="px-6 py-4">
+                                <div class="flex items-center gap-3">
+                                    <div class="w-9 h-9 rounded-full bg-slate-700"></div>
+                                    <div>
+                                        <p class="text-white font-bold">Mike Ross</p>
+                                        <p class="text-xs text-slate-500">mike.ross@example.com</p>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="px-6 py-4"><span
+                                    class="bg-slate-700/30 text-slate-300 px-2 py-0.5 rounded text-xs font-bold border border-white/5">Member</span>
+                            </td>
+                            <td class="px-6 py-4">Standard (Yearly)</td>
+                            <td class="px-6 py-4">2 days ago</td>
+                            <td class="px-6 py-4"><span
+                                    class="bg-orange-500/10 text-orange-500 px-2 py-0.5 rounded text-xs font-bold uppercase">Payment
+                                    Due</span></td>
+                            <td class="px-6 py-4 text-right">
+                                <button class="text-slate-500 hover:text-white"><iconify-icon
+                                        icon="solar:menu-dots-bold" width="20"></iconify-icon></button>
+                            </td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Add User Modal -->
+    <div id="addUserModal"
+        class="hidden fixed inset-0 z-[60] flex items-center justify-center bg-black/80 backdrop-blur-sm p-6">
+        <div class="bg-[#1a1a1a] w-full max-w-[500px] rounded-2xl p-8 border border-white/10 animate-scale-in">
+            <div class="flex justify-between items-center mb-6">
+                <h3 class="text-xl font-bold text-white font-dm-sans">Add New User</h3>
+                <button onclick="document.getElementById('addUserModal').classList.add('hidden')"
+                    class="text-slate-500 hover:text-white">
+                    <iconify-icon icon="solar:close-circle-linear" width="24"></iconify-icon>
+                </button>
+            </div>
+
+            <form class="space-y-4"
+                onsubmit="event.preventDefault(); document.getElementById('addUserModal').classList.add('hidden');">
+                <div class="grid grid-cols-2 gap-4">
+                    <div>
+                        <label class="text-xs font-bold text-slate-500 mb-1 block ml-1">First Name</label>
+                        <input type="text" placeholder="John"
+                            class="w-full bg-[#0f0f11] border border-white/10 rounded-lg px-4 py-2.5 text-white text-sm focus:border-[#22C55E] outline-none">
+                    </div>
+                    <div>
+                        <label class="text-xs font-bold text-slate-500 mb-1 block ml-1">Last Name</label>
+                        <input type="text" placeholder="Doe"
+                            class="w-full bg-[#0f0f11] border border-white/10 rounded-lg px-4 py-2.5 text-white text-sm focus:border-[#22C55E] outline-none">
+                    </div>
+                </div>
+
+                <div>
+                    <label class="text-xs font-bold text-slate-500 mb-1 block ml-1">Email Address</label>
+                    <input type="email" placeholder="user@company.com"
+                        class="w-full bg-[#0f0f11] border border-white/10 rounded-lg px-4 py-2.5 text-white text-sm focus:border-[#22C55E] outline-none">
+                </div>
+
+                <div class="grid grid-cols-2 gap-4">
+                    <div>
+                        <label class="text-xs font-bold text-slate-500 mb-1 block ml-1">Role</label>
+                        <select
+                            class="w-full bg-[#0f0f11] border border-white/10 rounded-lg px-4 py-2.5 text-white text-sm focus:border-[#22C55E] outline-none">
+                            <option>Member</option>
+                            <option>Trainer</option>
+                            <option>Admin</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="text-xs font-bold text-slate-500 mb-1 block ml-1">Membership Plan</label>
+                        <select
+                            class="w-full bg-[#0f0f11] border border-white/10 rounded-lg px-4 py-2.5 text-white text-sm focus:border-[#22C55E] outline-none">
+                            <option>Select Plan...</option>
+                            <option>Standard Monthly</option>
+                            <option>Premium Monthly</option>
+                            <option>Annual</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="flex justify-end gap-3 mt-6">
+                    <button type="button" onclick="document.getElementById('addUserModal').classList.add('hidden')"
+                        class="bg-transparent border border-white/10 text-white font-bold py-2.5 px-6 rounded-lg hover:bg-white/5 transition-colors">Cancel</button>
+                    <button type="submit"
+                        class="bg-[#22C55E] text-[#0f0f11] font-bold py-2.5 px-6 rounded-lg hover:bg-[#16a34a] transition-colors">Create
+                        User</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <style>
+        @keyframes scale-in {
+            from {
+                transform: scale(0.95);
+                opacity: 0;
+            }
+
+            to {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        .animate-scale-in {
+            animation: scale-in 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+    </style>
+
+</body>
+
+</html>

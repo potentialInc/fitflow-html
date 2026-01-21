@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FitFlow - Notifications</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=DM+Sans:wght@400;500;700&display=swap"
+        rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        .font-dm-sans {
+            font-family: 'DM Sans', sans-serif !important;
+        }
+    </style>
+</head>
+
+<body class="bg-[#0f0f11] text-slate-300 min-h-screen">
+
+    <!-- Mobile Container -->
+    <div class="w-full max-w-[402px] mx-auto bg-[#0f0f11] min-h-screen relative px-6 py-8">
+
+        <!-- Header -->
+        <div class="flex items-center justify-between mb-8">
+            <a href="member-home.html"
+                class="w-10 h-10 rounded-full bg-[#1a1a1a] flex items-center justify-center text-slate-400 hover:text-white transition-colors">
+                <iconify-icon icon="solar:arrow-left-linear" width="24"></iconify-icon>
+            </a>
+            <h1 class="text-lg font-dm-sans font-bold text-white">Notifications</h1>
+            <!-- Clear All -->
+            <button
+                class="w-10 h-10 rounded-full flex items-center justify-center text-slate-400 hover:text-white transition-colors">
+                <iconify-icon icon="solar:trash-bin-trash-linear" width="20"></iconify-icon>
+            </button>
+        </div>
+
+        <!-- List -->
+        <div class="space-y-4">
+
+            <!-- Item (Unread) -->
+            <div class="bg-[#1a1a1a] p-4 rounded-2xl border border-white/5 relative overflow-hidden flex gap-4">
+                <div
+                    class="w-10 h-10 rounded-full bg-[#22C55E]/10 text-[#22C55E] flex items-center justify-center shrink-0">
+                    <iconify-icon icon="solar:bell-bold" width="20"></iconify-icon>
+                </div>
+                <div class="flex-1">
+                    <div class="flex justify-between items-start mb-1">
+                        <h4 class="text-sm font-bold text-white">Class Reminder</h4>
+                        <span class="text-[10px] text-slate-500">2m ago</span>
+                    </div>
+                    <p class="text-xs text-slate-400 leading-relaxed">"Morning Yoga Flow" starts in 1 hour. Don't forget
+                        your mat!</p>
+                </div>
+                <div class="absolute top-4 right-4 w-2 h-2 rounded-full bg-[#22C55E]"></div>
+            </div>
+
+            <!-- Item -->
+            <div class="bg-[#1a1a1a] p-4 rounded-2xl border border-white/5 relative overflow-hidden flex gap-4">
+                <div
+                    class="w-10 h-10 rounded-full bg-blue-500/10 text-blue-500 flex items-center justify-center shrink-0">
+                    <iconify-icon icon="solar:check-circle-bold" width="20"></iconify-icon>
+                </div>
+                <div class="flex-1">
+                    <div class="flex justify-between items-start mb-1">
+                        <h4 class="text-sm font-bold text-white">Goal Reached!</h4>
+                        <span class="text-[10px] text-slate-500">1d ago</span>
+                    </div>
+                    <p class="text-xs text-slate-400 leading-relaxed">Congratulations! You've completed 10 workouts this
+                        month.</p>
+                </div>
+            </div>
+
+            <!-- Item -->
+            <div
+                class="bg-[#1a1a1a] p-4 rounded-2xl border border-white/5 relative overflow-hidden flex gap-4 opacity-70">
+                <div
+                    class="w-10 h-10 rounded-full bg-red-500/10 text-red-500 flex items-center justify-center shrink-0">
+                    <iconify-icon icon="solar:close-circle-bold" width="20"></iconify-icon>
+                </div>
+                <div class="flex-1">
+                    <div class="flex justify-between items-start mb-1">
+                        <h4 class="text-sm font-bold text-white">Payment Failed</h4>
+                        <span class="text-[10px] text-slate-500">3d ago</span>
+                    </div>
+                    <p class="text-xs text-slate-400 leading-relaxed">We couldn't process your membership renewal.
+                        Please update payment.</p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>

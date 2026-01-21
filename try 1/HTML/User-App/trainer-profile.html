@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FitFlow - Trainer Profile</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        .font-dm-sans {
+            font-family: 'DM Sans', sans-serif !important;
+        }
+    </style>
+</head>
+
+<body class="bg-neutral-950 text-slate-300 min-h-screen flex justify-center">
+
+    <div class="w-full max-w-[402px] bg-[#0f0f11] min-h-screen relative shadow-2xl pb-24">
+
+        <!-- Header Image -->
+        <div class="h-96 w-full relative">
+            <img src="https://images.unsplash.com/photo-1594824476969-23c999d39963?w=800&auto=format&fit=crop"
+                class="w-full h-full object-cover object-top">
+            <div class="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-[#0f0f11]"></div>
+
+            <!-- Navbar Actions -->
+            <div class="absolute top-6 left-6 right-6 flex justify-between items-center z-10">
+                <a href="trainer-list.html"
+                    class="w-10 h-10 rounded-full bg-black/20 backdrop-blur text-white flex items-center justify-center border border-white/10 hover:bg-black/40 transition-colors">
+                    <iconify-icon icon="solar:arrow-left-linear" width="20"></iconify-icon>
+                </a>
+                <button
+                    class="w-10 h-10 rounded-full bg-black/20 backdrop-blur text-white flex items-center justify-center border border-white/10 hover:bg-black/40 transition-colors">
+                    <iconify-icon icon="solar:heart-linear" width="20"></iconify-icon>
+                </button>
+            </div>
+        </div>
+
+        <!-- Content -->
+        <main class="px-6 -mt-20 relative z-10 space-y-8">
+
+            <!-- Header Info -->
+            <div>
+                <h1 class="text-4xl font-dm-sans font-light text-white leading-none mb-2">Mike Ross</h1>
+                <p class="text-[#FACC15] font-medium mb-4">Strength & Conditioning Coach</p>
+
+                <div class="flex gap-4 mb-6">
+                    <div
+                        class="flex items-center gap-1 text-white bg-white/5 px-3 py-1.5 rounded-full text-xs border border-white/5">
+                        <iconify-icon icon="solar:star-bold" class="text-[#FACC15]"></iconify-icon>
+                        4.9 (120+ Reviews)
+                    </div>
+                    <div
+                        class="flex items-center gap-1 text-white bg-white/5 px-3 py-1.5 rounded-full text-xs border border-white/5">
+                        <iconify-icon icon="solar:medal-star-linear" class="text-[#FACC15]"></iconify-icon>
+                        5 Years Exp.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bio -->
+            <div class="space-y-3">
+                <h3 class="text-lg font-dm-sans text-white">About</h3>
+                <p class="text-slate-400 text-sm leading-relaxed">
+                    Specializing in functional hypertrophy and strength gains. My goal is to help you build a resilient
+                    body
+                    that moves as good as it looks. NASM Certified.
+                </p>
+            </div>
+
+            <!-- Reviews Preview -->
+            <div class="bg-neutral-900 border border-white/5 rounded-[2rem] p-5">
+                <div class="flex justify-between items-center mb-4">
+                    <h3 class="text-white font-medium">Recent Reviews</h3>
+                    <a href="#" class="text-xs text-[#FACC15]">View All</a>
+                </div>
+                <div class="space-y-4">
+                    <div class="text-sm">
+                        <div class="flex items-center gap-2 mb-1">
+                            <span class="text-white font-medium">Alex B.</span>
+                            <div class="flex text-[#FACC15] text-[10px]">★★★★★</div>
+                        </div>
+                        <p class="text-slate-500">Mike pushes you to your limit but keeps strict form safe. Best session
+                            ever.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Availability Preview (Mock) -->
+            <div class="space-y-3">
+                <h3 class="text-lg font-dm-sans text-white">Availability</h3>
+                <div class="grid grid-cols-4 gap-2">
+                    <div class="bg-white/5 rounded-2xl p-2 text-center border border-white/10">
+                        <span class="text-[10px] text-slate-500 block uppercase">Mon</span>
+                        <span class="text-white font-medium">10-6</span>
+                    </div>
+                    <div class="bg-white/5 rounded-2xl p-2 text-center border border-white/10">
+                        <span class="text-[10px] text-slate-500 block uppercase">Tue</span>
+                        <span class="text-white font-medium">12-8</span>
+                    </div>
+                    <div class="bg-white/5 rounded-2xl p-2 text-center border border-white/10">
+                        <span class="text-[10px] text-slate-500 block uppercase">Wed</span>
+                        <span class="text-white font-medium">10-6</span>
+                    </div>
+                    <div class="bg-white/5 rounded-2xl p-2 text-center border border-white/10">
+                        <span class="text-[10px] text-slate-500 block uppercase">Thu</span>
+                        <span class="text-white font-medium">Off</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="h-12"></div>
+
+        </main>
+
+        <!-- Bottom Action -->
+        <div
+            class="fixed bottom-0 left-1/2 -translate-x-1/2 w-full max-w-[402px] p-6 bg-[#0f0f11] border-t border-white/10 z-50">
+            <div class="max-w-md mx-auto flex items-center gap-4">
+                <div class="flex-1">
+                    <p class="text-xs text-slate-400 uppercase tracking-wide">Session Price</p>
+                    <p class="text-white text-lg font-dm-sans">$50 <span class="text-sm font-sans text-slate-500">/
+                            hour</span></p>
+                </div>
+                <button onclick="window.location.href='book-session.html'"
+                    class="bg-[#FACC15] hover:bg-[#FACC15]/90 text-neutral-900 px-8 py-4 rounded-full font-medium shadow-lg shadow-yellow-500/10 transition-colors">
+                    Book Session
+                </button>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>

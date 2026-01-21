@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FitFlow Admin - Reports</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=DM+Sans:wght@400;500;700&display=swap"
+        rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        .font-dm-sans {
+            font-family: 'DM Sans', sans-serif !important;
+        }
+    </style>
+</head>
+
+<body class="bg-[#0f0f11] text-slate-300 font-inter h-screen flex overflow-hidden">
+
+    <!-- Sidebar -->
+    <aside class="w-64 bg-[#1a1a1a] border-r border-white/5 flex flex-col h-full">
+        <!-- Logo -->
+        <div class="h-16 flex items-center px-6 border-b border-white/5">
+            <div class="flex items-center gap-2 text-[#22C55E]">
+                <iconify-icon icon="solar:dumbbell-large-minimalistic-bold" width="24"></iconify-icon>
+                <span class="font-dm-sans font-bold text-xl text-white tracking-tight">FitFlow</span>
+            </div>
+        </div>
+
+        <nav class="flex-1 px-3 py-6 space-y-1">
+            <a href="admin-dashboard.html"
+                class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-400 hover:text-white hover:bg-white/5 transition-colors">
+                <iconify-icon icon="solar:widget-linear" width="20"></iconify-icon>
+                Dashboard
+            </a>
+            <div class="pt-4 pb-2 px-3 text-[10px] font-bold text-slate-500 uppercase tracking-wider">Management</div>
+            <a href="users.html"
+                class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-400 hover:text-white hover:bg-white/5 transition-colors">
+                <iconify-icon icon="solar:users-group-rounded-linear" width="20"></iconify-icon>
+                Users & Roles
+            </a>
+            <a href="facility.html"
+                class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-400 hover:text-white hover:bg-white/5 transition-colors">
+                <iconify-icon icon="solar:buildings-linear" width="20"></iconify-icon>
+                Facility
+            </a>
+            <div class="pt-4 pb-2 px-3 text-[10px] font-bold text-slate-500 uppercase tracking-wider">Content</div>
+            <a href="content-cms.html"
+                class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-400 hover:text-white hover:bg-white/5 transition-colors">
+                <iconify-icon icon="solar:library-linear" width="20"></iconify-icon>
+                Content CMS
+            </a>
+            <div class="pt-4 pb-2 px-3 text-[10px] font-bold text-slate-500 uppercase tracking-wider">Analytics</div>
+            <a href="reports.html"
+                class="flex items-center gap-3 px-3 py-2.5 rounded-lg bg-[#22C55E]/10 text-[#22C55E] font-medium transition-colors">
+                <iconify-icon icon="solar:chart-square-linear" width="20"></iconify-icon>
+                Reports
+            </a>
+        </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="flex-1 flex flex-col overflow-hidden">
+
+        <!-- Top Bar -->
+        <header class="h-16 border-b border-white/5 bg-[#0f0f11] flex items-center justify-between px-8">
+            <h1 class="text-xl font-bold text-white font-dm-sans">Analytics & Reports</h1>
+            <div class="flex items-center gap-4">
+                <button
+                    class="bg-[#1a1a1a] text-white px-4 py-2 rounded-lg text-sm font-medium border border-white/5 flex items-center gap-2 hover:bg-[#252525] transition-colors">
+                    <iconify-icon icon="solar:download-linear" width="16"></iconify-icon>
+                    Export CSV
+                </button>
+            </div>
+        </header>
+
+        <div class="flex-1 overflow-y-auto p-8">
+
+            <!-- Report Type Tabs -->
+            <div class="flex gap-4 mb-6">
+                <div
+                    class="bg-[#22C55E] text-[#0f0f11] px-5 py-2 rounded-full text-sm font-bold flex items-center gap-2 cursor-pointer">
+                    <iconify-icon icon="solar:wallet-linear"></iconify-icon> Revenue
+                </div>
+                <div
+                    class="bg-[#1a1a1a] text-slate-400 px-5 py-2 rounded-full text-sm font-medium flex items-center gap-2 cursor-pointer hover:text-white hover:bg-[#252525] border border-white/5">
+                    <iconify-icon icon="solar:users-group-rounded-linear"></iconify-icon> User Growth
+                </div>
+                <div
+                    class="bg-[#1a1a1a] text-slate-400 px-5 py-2 rounded-full text-sm font-medium flex items-center gap-2 cursor-pointer hover:text-white hover:bg-[#252525] border border-white/5">
+                    <iconify-icon icon="solar:clock-circle-linear"></iconify-icon> Peak Hours
+                </div>
+            </div>
+
+            <!-- Main Chart Area -->
+            <div class="bg-[#1a1a1a] p-8 rounded-2xl border border-white/5 mb-8 h-96 flex flex-col">
+                <div class="flex justify-between items-center mb-8">
+                    <div>
+                        <h2 class="text-2xl font-bold text-white font-dm-sans">$128,450.00</h2>
+                        <p class="text-sm text-slate-500">Total Revenue (Year to Date)</p>
+                    </div>
+                    <select
+                        class="bg-[#0f0f11] text-sm text-white px-4 py-2 rounded-lg border border-white/10 outline-none">
+                        <option>Last 12 Months</option>
+                        <option>This Year</option>
+                        <option>Last Quarter</option>
+                    </select>
+                </div>
+
+                <!-- Mock Line Chart -->
+                <div class="flex-1 w-full relative">
+                    <!-- Grid Lines -->
+                    <div class="absolute inset-x-0 top-0 h-px bg-white/5"></div>
+                    <div class="absolute inset-x-0 top-1/4 h-px bg-white/5"></div>
+                    <div class="absolute inset-x-0 top-2/4 h-px bg-white/5"></div>
+                    <div class="absolute inset-x-0 top-3/4 h-px bg-white/5"></div>
+                    <div class="absolute inset-x-0 bottom-0 h-px bg-white/5"></div>
+
+                    <!-- Line (SVG Path) -->
+                    <svg class="absolute inset-0 w-full h-full" preserveAspectRatio="none">
+                        <path
+                            d="M0 80 Q 50 100, 100 70 T 200 60 T 300 90 T 400 30 T 500 50 T 600 20 L 600 150 L 0 150 Z"
+                            fill="url(#gradient)" opacity="0.2"></path>
+                        <path d="M0 80 Q 50 100, 100 70 T 200 60 T 300 90 T 400 30 T 500 50 T 600 20" fill="none"
+                            stroke="#22C55E" stroke-width="3"></path>
+                        <defs>
+                            <linearGradient id="gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                                <stop offset="0%" style="stop-color:#22C55E;stop-opacity:1" />
+                                <stop offset="100%" style="stop-color:#22C55E;stop-opacity:0" />
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                </div>
+
+                <!-- X Axis Labels -->
+                <div class="flex justify-between text-xs text-slate-500 mt-4 uppercase font-mono">
+                    <span>Jan</span><span>Feb</span><span>Mar</span><span>Apr</span><span>May</span><span>Jun</span>
+                </div>
+            </div>
+
+            <!-- Secondary Metrics -->
+            <div class="grid grid-cols-2 gap-6">
+                <div class="bg-[#1a1a1a] p-6 rounded-2xl border border-white/5">
+                    <h3 class="text-sm font-bold text-white mb-4">Top Revenue Sources</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center gap-3">
+                                <div class="w-3 h-3 rounded-full bg-[#22C55E]"></div>
+                                <span class="text-sm text-slate-300">Memberships</span>
+                            </div>
+                            <span class="text-sm font-bold text-white">65%</span>
+                        </div>
+                        <div class="w-full bg-black/20 h-2 rounded-full overflow-hidden">
+                            <div class="bg-[#22C55E] w-[65%] h-full rounded-full"></div>
+                        </div>
+
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center gap-3">
+                                <div class="w-3 h-3 rounded-full bg-blue-500"></div>
+                                <span class="text-sm text-slate-300">Personal Training</span>
+                            </div>
+                            <span class="text-sm font-bold text-white">25%</span>
+                        </div>
+                        <div class="w-full bg-black/20 h-2 rounded-full overflow-hidden">
+                            <div class="bg-blue-500 w-[25%] h-full rounded-full"></div>
+                        </div>
+
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center gap-3">
+                                <div class="w-3 h-3 rounded-full bg-purple-500"></div>
+                                <span class="text-sm text-slate-300">Merchandise</span>
+                            </div>
+                            <span class="text-sm font-bold text-white">10%</span>
+                        </div>
+                        <div class="w-full bg-black/20 h-2 rounded-full overflow-hidden">
+                            <div class="bg-purple-500 w-[10%] h-full rounded-full"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-[#1a1a1a] p-6 rounded-2xl border border-white/5">
+                    <h3 class="text-sm font-bold text-white mb-4">Churn Rate</h3>
+                    <div class="flex items-end justify-between mb-4">
+                        <h2 class="text-3xl font-bold text-white font-dm-sans">4.2%</h2>
+                        <span class="text-xs font-bold text-red-500 mb-2">+0.5% vs last month</span>
+                    </div>
+                    <p class="text-xs text-slate-500 leading-relaxed">Churn has increased slightly in the last 30 days.
+                        Most cancellations are citing "relocation" or "financial reasons".</p>
+
+                    <button
+                        class="mt-6 w-full py-3 rounded-xl border border-white/10 text-xs font-bold text-white hover:bg-white/5 transition-colors">View
+                        Exit Surveys</button>
+                </div>
+            </div>
+
+        </div>
+
+    </main>
+
+</body>
+
+</html>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FitFlow - Trainer Profile</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=DM+Sans:wght@400;500;700&display=swap"
+        rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        .font-dm-sans {
+            font-family: 'DM Sans', sans-serif !important;
+        }
+    </style>
+</head>
+
+<body class="bg-[#0f0f11] text-slate-300 min-h-screen pb-32">
+
+    <!-- Mobile Container -->
+    <div class="w-full max-w-[402px] mx-auto bg-[#0f0f11] min-h-screen relative">
+
+        <!-- Hero Image -->
+        <div class="h-80 relative">
+            <img src="https://randomuser.me/api/portraits/men/32.jpg" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-gradient-to-t from-[#0f0f11] via-[#0f0f11]/40 to-transparent"></div>
+
+            <!-- Back Button -->
+            <a href="trainers.html"
+                class="absolute top-6 left-6 w-10 h-10 rounded-full bg-black/20 backdrop-blur-md flex items-center justify-center text-white border border-white/10">
+                <iconify-icon icon="solar:arrow-left-linear" width="24"></iconify-icon>
+            </a>
+        </div>
+
+        <!-- Content -->
+        <div class="px-6 -mt-16 relative z-10">
+            <div class="flex justify-between items-end mb-4">
+                <div>
+                    <h1 class="text-3xl font-dm-sans font-bold text-white leading-tight">Alex<br>Richardson</h1>
+                    <div class="flex items-center gap-2 mt-2">
+                        <span
+                            class="px-2 py-0.5 rounded-md bg-white/10 text-white text-[10px] uppercase font-bold tracking-wide">Strength</span>
+                        <span
+                            class="px-2 py-0.5 rounded-md bg-white/10 text-white text-[10px] uppercase font-bold tracking-wide">HIIT</span>
+                    </div>
+                </div>
+                <div class="flex flex-col items-center bg-[#1a1a1a] p-3 rounded-2xl border border-white/10 shadow-xl">
+                    <div class="flex items-center gap-1 text-yellow-400">
+                        <iconify-icon icon="solar:star-bold" width="16"></iconify-icon>
+                        <span class="text-lg font-bold text-white">4.9</span>
+                    </div>
+                    <span class="text-[10px] text-slate-500">120 Reviews</span>
+                </div>
+            </div>
+
+            <!-- Stats Row -->
+            <div class="flex gap-4 mb-8">
+                <div class="flex-1 bg-[#1a1a1a] p-3 rounded-2xl border border-white/5 text-center">
+                    <p class="text-xl font-bold text-white font-dm-sans">5+</p>
+                    <p class="text-[10px] text-slate-500 uppercase">Years Exp.</p>
+                </div>
+                <div class="flex-1 bg-[#1a1a1a] p-3 rounded-2xl border border-white/5 text-center">
+                    <p class="text-xl font-bold text-white font-dm-sans">300+</p>
+                    <p class="text-[10px] text-slate-500 uppercase">Clients</p>
+                </div>
+                <div class="flex-1 bg-[#1a1a1a] p-3 rounded-2xl border border-white/5 text-center">
+                    <p class="text-xl font-bold text-white font-dm-sans">NASM</p>
+                    <p class="text-[10px] text-slate-500 uppercase">Cert.</p>
+                </div>
+            </div>
+
+            <!-- Bio -->
+            <div class="mb-8">
+                <h3 class="text-lg font-bold text-white font-dm-sans mb-2">About</h3>
+                <p class="text-sm text-slate-400 leading-relaxed">
+                    Passionate about helping people unlock their true strength potential. specialize in hypertrophy
+                    training and functional movement patterns for longevity.
+                </p>
+            </div>
+
+            <!-- Reviews Preview -->
+            <div class="mb-8">
+                <div class="flex justify-between items-center mb-4">
+                    <h3 class="text-lg font-bold text-white font-dm-sans">Recent Reviews</h3>
+                    <button class="text-xs text-[#22C55E]">View All</button>
+                </div>
+                <div class="bg-[#1a1a1a] p-4 rounded-2xl border border-white/5">
+                    <div class="flex justify-between items-start mb-2">
+                        <div class="flex items-center gap-2">
+                            <div class="w-6 h-6 rounded-full bg-slate-700"></div>
+                            <span class="text-xs font-bold text-white">Mike T.</span>
+                        </div>
+                        <div class="flex gap-0.5 text-yellow-400">
+                            <iconify-icon icon="solar:star-bold" width="12"></iconify-icon>
+                            <iconify-icon icon="solar:star-bold" width="12"></iconify-icon>
+                            <iconify-icon icon="solar:star-bold" width="12"></iconify-icon>
+                            <iconify-icon icon="solar:star-bold" width="12"></iconify-icon>
+                            <iconify-icon icon="solar:star-bold" width="12"></iconify-icon>
+                        </div>
+                    </div>
+                    <p class="text-xs text-slate-400 italic">"Alex pushed me harder than thought possible. Great
+                        sessions!"</p>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Sticky Footer -->
+        <div class="fixed bottom-0 w-full max-w-[402px] bg-[#0f0f11] border-t border-white/5 p-6 z-20 flex gap-4">
+            <button
+                class="w-14 h-14 rounded-2xl bg-[#1a1a1a] flex items-center justify-center text-white border border-white/10 hover:bg-[#252525]">
+                <iconify-icon icon="solar:chat-round-dots-linear" width="24"></iconify-icon>
+            </button>
+            <a href="book-session.html"
+                class="flex-1 bg-[#22C55E] text-[#0f0f11] rounded-2xl font-bold text-base flex items-center justify-center shadow-lg shadow-[#22C55E]/10 active:scale-[0.98] transition-transform">
+                Book Session ($60)
+            </a>
+        </div>
+
+    </div>
+
+</body>
+
+</html>

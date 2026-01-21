@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FitFlow - Workouts</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=DM+Sans:wght@400;500;700&display=swap"
+        rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'sans': ['Inter', 'sans-serif'],
+                        'dm-sans': ['DM Sans', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: '#22C55E',
+                        dark: '#0f0f11',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+
+        .glass {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+    </style>
+</head>
+
+<body class="bg-dark text-slate-300 min-h-screen pb-24 font-sans">
+
+    <!-- Mobile Container -->
+    <div class="w-full max-w-[402px] mx-auto bg-dark min-h-screen relative">
+
+        <!-- Header -->
+        <header class="pt-8 pb-4 px-6 flex items-center justify-between sticky top-0 z-30 bg-dark/80 backdrop-blur-md">
+            <div>
+                <p class="text-xs font-bold text-slate-500 uppercase tracking-widest mb-1">Today's Focus</p>
+                <h1 class="text-2xl font-dm-sans font-bold text-white">Workouts</h1>
+            </div>
+            <div class="flex items-center gap-2 bg-[#1a1a1a] px-3 py-1.5 rounded-full border border-white/5">
+                <iconify-icon icon="solar:fire-bold" class="text-orange-500 text-lg"></iconify-icon>
+                <span class="text-sm font-bold text-white">12</span>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="space-y-8 pb-8">
+
+            <!-- Hero: Next Workout -->
+            <section class="px-6 relative">
+                <div class="w-full aspect-[4/3] rounded-[2rem] relative overflow-hidden group">
+                    <!-- Background Image (Dimmed) -->
+                    <img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=800&q=80"
+                        class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:scale-105 transition-transform duration-700 ease-out">
+
+                    <!-- Gradient Overlay -->
+                    <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"></div>
+
+                    <!-- Content -->
+                    <div class="absolute inset-0 p-6 flex flex-col justify-end">
+                        <div class="mb-4">
+                            <div class="flex items-center gap-2 mb-2">
+                                <span
+                                    class="bg-brand text-black px-2 py-0.5 rounded text-[10px] font-bold uppercase tracking-wide">Next
+                                    Up</span>
+                                <span class="text-xs font-medium text-white/80">Hypertrophy • Day 12</span>
+                            </div>
+                            <h2 class="text-3xl font-dm-sans font-bold text-white leading-tight mb-2">Upper
+                                Body<br>Power</h2>
+                            <div class="flex items-center gap-4 text-xs font-medium text-slate-300">
+                                <span class="flex items-center gap-1"><iconify-icon
+                                        icon="solar:clock-circle-linear"></iconify-icon> 45 min</span>
+                                <span class="flex items-center gap-1"><iconify-icon
+                                        icon="solar:dumbbell-large-linear"></iconify-icon> Heavy</span>
+                            </div>
+                        </div>
+
+                        <a href="workout-active.html"
+                            class="w-full bg-white text-black font-bold py-3.5 rounded-xl flex items-center justify-center gap-2 hover:bg-slate-200 transition-colors">
+                            <iconify-icon icon="solar:play-circle-bold" class="text-xl"></iconify-icon>
+                            Start Workout
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Weekly Progress Slider -->
+            <section class="pl-6">
+                <div class="bg-[#1a1a1a] border-l border-y border-white/5 rounded-l-2xl p-4 pr-0">
+                    <h3 class="text-sm font-bold text-white font-dm-sans mb-3">This Week</h3>
+                    <div class="flex gap-4 overflow-x-auto no-scrollbar pb-2 pr-6">
+                        <!-- Day Item: Done -->
+                        <div class="flex flex-col items-center gap-2 min-w-[3rem] opacity-50">
+                            <span class="text-[10px] font-bold text-slate-500 uppercase">Mon</span>
+                            <div
+                                class="w-10 h-10 rounded-full border border-brand bg-brand/10 flex items-center justify-center text-brand">
+                                <iconify-icon icon="solar:check-circle-bold"></iconify-icon>
+                            </div>
+                        </div>
+                        <!-- Day Item: Active -->
+                        <div class="flex flex-col items-center gap-2 min-w-[3rem]">
+                            <span class="text-[10px] font-bold text-brand uppercase">Tue</span>
+                            <div
+                                class="w-10 h-10 rounded-full bg-brand text-black flex items-center justify-center font-bold text-sm shadow-[0_0_15px_rgba(34,197,94,0.4)]">
+                                12
+                            </div>
+                        </div>
+                        <!-- Day Item: Future -->
+                        <div class="flex flex-col items-center gap-2 min-w-[3rem]">
+                            <span class="text-[10px] font-bold text-slate-500 uppercase">Wed</span>
+                            <div
+                                class="w-10 h-10 rounded-full border border-white/10 bg-[#252525] flex items-center justify-center text-slate-500 text-sm">
+                                13
+                            </div>
+                        </div>
+                        <div class="flex flex-col items-center gap-2 min-w-[3rem]">
+                            <span class="text-[10px] font-bold text-slate-500 uppercase">Thu</span>
+                            <div
+                                class="w-10 h-10 rounded-full border border-white/10 bg-[#252525] flex items-center justify-center text-slate-500 text-sm">
+                                14
+                            </div>
+                        </div>
+                        <div class="flex flex-col items-center gap-2 min-w-[3rem]">
+                            <span class="text-[10px] font-bold text-slate-500 uppercase">Fri</span>
+                            <div
+                                class="w-10 h-10 rounded-full border border-white/10 bg-[#252525] flex items-center justify-center text-slate-500 text-sm">
+                                15
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Quick Categories -->
+            <section class="px-6">
+                <div class="flex justify-between items-end mb-4">
+                    <h3 class="text-lg font-bold text-white font-dm-sans">Explore</h3>
+                    <a href="exercise-library.html" class="text-xs font-bold text-brand">View All</a>
+                </div>
+
+                <div class="grid grid-cols-2 gap-4">
+                    <!-- Card 1 -->
+                    <div
+                        class="bg-[#1a1a1a] p-4 rounded-[1.5rem] border border-white/5 relative overflow-hidden group cursor-pointer hover:border-white/20 transition-all">
+                        <div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
+                            <iconify-icon icon="solar:running-bold" width="60"></iconify-icon>
+                        </div>
+                        <div
+                            class="w-10 h-10 rounded-full bg-blue-500/10 text-blue-500 flex items-center justify-center mb-4">
+                            <iconify-icon icon="solar:stopwatch-play-linear" width="20"></iconify-icon>
+                        </div>
+                        <h4 class="text-base font-bold text-white mb-1">Quick HIIT</h4>
+                        <p class="text-[10px] text-slate-500">Under 20 mins</p>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div
+                        class="bg-[#1a1a1a] p-4 rounded-[1.5rem] border border-white/5 relative overflow-hidden group cursor-pointer hover:border-white/20 transition-all">
+                        <div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
+                            <iconify-icon icon="solar:meditation-round-bold" width="60"></iconify-icon>
+                        </div>
+                        <div
+                            class="w-10 h-10 rounded-full bg-purple-500/10 text-purple-500 flex items-center justify-center mb-4">
+                            <iconify-icon icon="solar:yoga-linear" width="20"></iconify-icon>
+                        </div>
+                        <h4 class="text-base font-bold text-white mb-1">Recovery</h4>
+                        <p class="text-[10px] text-slate-500">Yoga & Stretch</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Featured Plan -->
+            <section class="px-6">
+                <h3 class="text-lg font-bold text-white font-dm-sans mb-4">Your Active Plan</h3>
+                <a href="workout-plan-detail.html"
+                    class="block bg-[#1a1a1a] rounded-2xl p-2 border border-white/5 hover:bg-[#252525] transition-colors">
+                    <div class="flex gap-4">
+                        <div class="w-20 h-20 rounded-xl bg-[#252525] overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1541534741688-6078c6bfb5c5?w=200&q=80"
+                                class="w-full h-full object-cover">
+                        </div>
+                        <div class="py-1 flex-1">
+                            <h4 class="text-sm font-bold text-white mb-1">Hypertrophy Phase 1</h4>
+                            <p class="text-xs text-slate-500 mb-2">Build muscle mass and strength.</p>
+                            <div class="w-full bg-black h-1.5 rounded-full overflow-hidden">
+                                <div class="bg-brand w-[35%] h-full rounded-full"></div>
+                            </div>
+                            <div class="flex justify-between mt-1">
+                                <span class="text-[10px] text-brand font-bold">35%</span>
+                                <span class="text-[10px] text-slate-600">8 Weeks</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </section>
+
+        </main>
+
+        <!-- Bottom Navigation -->
+        <nav
+            class="fixed bottom-0 w-full max-w-[402px] bg-dark/90 backdrop-blur-xl border-t border-white/5 pb-6 pt-2 px-6 flex justify-between items-center z-50">
+            <a href="member-home.html"
+                class="flex flex-col items-center gap-1 p-2 text-slate-500 hover:text-white transition-colors">
+                <iconify-icon icon="solar:home-smile-linear" width="24"></iconify-icon>
+                <span class="text-[10px] font-medium">Home</span>
+            </a>
+            <a href="classes.html"
+                class="flex flex-col items-center gap-1 p-2 text-slate-500 hover:text-white transition-colors">
+                <iconify-icon icon="solar:calendar-linear" width="24"></iconify-icon>
+                <span class="text-[10px] font-medium">Classes</span>
+            </a>
+            <a href="trainers.html"
+                class="flex flex-col items-center gap-1 p-2 text-slate-500 hover:text-white transition-colors">
+                <iconify-icon icon="solar:users-group-rounded-linear" width="24"></iconify-icon>
+                <span class="text-[10px] font-medium">Trainers</span>
+            </a>
+            <a href="workouts.html" class="flex flex-col items-center gap-1 p-2 text-brand">
+                <iconify-icon icon="solar:dumbbell-large-bold" width="24"></iconify-icon>
+                <span class="text-[10px] font-medium">Workouts</span>
+            </a>
+            <a href="profile.html"
+                class="flex flex-col items-center gap-1 p-2 text-slate-500 hover:text-white transition-colors">
+                <iconify-icon icon="solar:user-circle-linear" width="24"></iconify-icon>
+                <span class="text-[10px] font-medium">Profile</span>
+            </a>
+        </nav>
+
+    </div>
+
+</body>
+
+</html>

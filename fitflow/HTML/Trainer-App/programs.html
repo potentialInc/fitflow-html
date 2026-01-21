@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FitFlow Trainer - Programs</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=DM+Sans:wght@400;500;700&display=swap"
+        rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        .font-dm-sans {
+            font-family: 'DM Sans', sans-serif !important;
+        }
+
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+
+<body class="bg-[#0f0f11] text-slate-300 min-h-screen pb-24">
+
+    <!-- Mobile Container -->
+    <div class="w-full max-w-[402px] mx-auto bg-[#0f0f11] min-h-screen relative px-6 py-8">
+
+        <!-- Header -->
+        <div class="flex items-center justify-between mb-8">
+            <h1 class="text-2xl font-dm-sans font-bold text-white">Programs</h1>
+            <button
+                class="w-10 h-10 rounded-full bg-[#22C55E] flex items-center justify-center text-[#0f0f11] hover:bg-[#16a34a] shadow-lg shadow-[#22C55E]/20">
+                <iconify-icon icon="solar:add-circle-bold" width="24"></iconify-icon>
+            </button>
+        </div>
+
+        <!-- Filters -->
+        <div class="flex gap-2 mb-6 overflow-x-auto no-scrollbar">
+            <button class="whitespace-nowrap bg-white text-black px-4 py-2 rounded-full text-xs font-bold">My
+                Programs</button>
+            <button
+                class="whitespace-nowrap bg-[#1a1a1a] text-slate-400 border border-white/10 px-4 py-2 rounded-full text-xs font-medium">Templates</button>
+            <button
+                class="whitespace-nowrap bg-[#1a1a1a] text-slate-400 border border-white/10 px-4 py-2 rounded-full text-xs font-medium">Archived</button>
+        </div>
+
+        <!-- Grid -->
+        <div class="grid grid-cols-2 gap-4">
+
+            <!-- Program Card -->
+            <div
+                class="bg-[#1a1a1a] p-4 rounded-3xl border border-white/5 flex flex-col justify-between h-48 group hover:border-[#22C55E]/30 transition-colors cursor-pointer">
+                <div>
+                    <div
+                        class="w-10 h-10 rounded-full bg-blue-500/10 text-blue-500 flex items-center justify-center mb-3">
+                        <iconify-icon icon="solar:dumbbell-large-bold" width="20"></iconify-icon>
+                    </div>
+                    <h3 class="text-base font-bold text-white leading-tight mb-1">Hypertrophy Phase 1</h3>
+                    <p class="text-[10px] text-slate-500">8 Weeks • Interm.</p>
+                </div>
+
+                <div class="flex items-center justify-between pt-4 border-t border-white/5">
+                    <span class="text-[10px] text-slate-400">12 Active Users</span>
+                    <iconify-icon icon="solar:menu-dots-bold" class="text-slate-500 hover:text-white"></iconify-icon>
+                </div>
+            </div>
+
+            <!-- Program Card -->
+            <div
+                class="bg-[#1a1a1a] p-4 rounded-3xl border border-white/5 flex flex-col justify-between h-48 group hover:border-[#22C55E]/30 transition-colors cursor-pointer">
+                <div>
+                    <div
+                        class="w-10 h-10 rounded-full bg-[#22C55E]/10 text-[#22C55E] flex items-center justify-center mb-3">
+                        <iconify-icon icon="solar:flame-bold" width="20"></iconify-icon>
+                    </div>
+                    <h3 class="text-base font-bold text-white leading-tight mb-1">Fat Loss Shred</h3>
+                    <p class="text-[10px] text-slate-500">12 Weeks • Adv.</p>
+                </div>
+
+                <div class="flex items-center justify-between pt-4 border-t border-white/5">
+                    <span class="text-[10px] text-slate-400">8 Active Users</span>
+                    <iconify-icon icon="solar:menu-dots-bold" class="text-slate-500 hover:text-white"></iconify-icon>
+                </div>
+            </div>
+
+            <!-- Program Card -->
+            <div
+                class="bg-[#1a1a1a] p-4 rounded-3xl border border-white/5 flex flex-col justify-between h-48 group hover:border-[#22C55E]/30 transition-colors cursor-pointer">
+                <div>
+                    <div
+                        class="w-10 h-10 rounded-full bg-purple-500/10 text-purple-500 flex items-center justify-center mb-3">
+                        <iconify-icon icon="solar:meditation-round-bold" width="20"></iconify-icon>
+                    </div>
+                    <h3 class="text-base font-bold text-white leading-tight mb-1">Mobility & Flow</h3>
+                    <p class="text-[10px] text-slate-500">4 Weeks • Beg.</p>
+                </div>
+
+                <div class="flex items-center justify-between pt-4 border-t border-white/5">
+                    <span class="text-[10px] text-slate-400">5 Active Users</span>
+                    <iconify-icon icon="solar:menu-dots-bold" class="text-slate-500 hover:text-white"></iconify-icon>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Bottom Navigation -->
+    <nav
+        class="fixed bottom-0 left-0 right-0 max-w-[402px] mx-auto bg-[#0f0f11]/90 backdrop-blur-xl border-t border-white/5 pb-6 pt-2 px-6 flex justify-between items-center z-50">
+        <a href="trainer-home.html"
+            class="flex flex-col items-center gap-1 p-2 text-slate-500 hover:text-white transition-colors">
+            <iconify-icon icon="solar:home-smile-linear" width="24"></iconify-icon>
+            <span class="text-[10px] font-medium">Home</span>
+        </a>
+        <a href="clients.html"
+            class="flex flex-col items-center gap-1 p-2 text-slate-500 hover:text-white transition-colors">
+            <iconify-icon icon="solar:users-group-two-rounded-linear" width="24"></iconify-icon>
+            <span class="text-[10px] font-medium">Clients</span>
+        </a>
+        <a href="trainer-schedule.html"
+            class="flex flex-col items-center gap-1 p-2 text-slate-500 hover:text-white transition-colors">
+            <iconify-icon icon="solar:calendar-linear" width="24"></iconify-icon>
+            <span class="text-[10px] font-medium">Schedule</span>
+        </a>
+        <a href="programs.html" class="flex flex-col items-center gap-1 p-2 text-[#22C55E]">
+            <iconify-icon icon="solar:dumbbell-large-bold" width="24"></iconify-icon>
+            <span class="text-[10px] font-medium">Programs</span>
+        </a>
+        <a href="earnings.html"
+            class="flex flex-col items-center gap-1 p-2 text-slate-500 hover:text-white transition-colors">
+            <iconify-icon icon="solar:wallet-linear" width="24"></iconify-icon>
+            <span class="text-[10px] font-medium">Finance</span>
+        </a>
+    </nav>
+
+</body>
+
+</html>

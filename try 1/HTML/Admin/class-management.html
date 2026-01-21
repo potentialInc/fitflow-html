@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FitFlow Admin - Class Log</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        .font-dm-sans {
+            font-family: 'DM Sans', sans-serif !important;
+        }
+    </style>
+</head>
+
+<body class="bg-[#0f0f11] text-slate-300 min-h-screen flex">
+
+    <!-- Sidebar -->
+    <aside class="w-64 bg-neutral-900 border-r border-white/5 flex flex-col fixed inset-y-0">
+        <div class="p-6 flex items-center gap-2">
+            <iconify-icon icon="solar:graph-up-linear" width="28" class="text-[#FACC15]"></iconify-icon>
+            <span class="text-xl font-dm-sans text-white">FitFlow Admin</span>
+        </div>
+
+        <nav class="flex-1 px-4 space-y-1">
+            <a href="dashboard.html"
+                class="flex items-center gap-3 px-4 py-3 text-slate-400 hover:text-white hover:bg-white/5 rounded-xl transition-colors">
+                <iconify-icon icon="solar:widget-linear" width="20"></iconify-icon> Dashboard
+            </a>
+            <a href="member-management.html"
+                class="flex items-center gap-3 px-4 py-3 text-slate-400 hover:text-white hover:bg-white/5 rounded-xl transition-colors">
+                <iconify-icon icon="solar:users-group-rounded-linear" width="20"></iconify-icon> Members
+            </a>
+            <a href="class-management.html"
+                class="flex items-center gap-3 px-4 py-3 bg-[#FACC15] text-neutral-900 rounded-xl font-medium">
+                <iconify-icon icon="solar:calendar-linear" width="20"></iconify-icon> Classes
+            </a>
+            <a href="revenue.html"
+                class="flex items-center gap-3 px-4 py-3 text-slate-400 hover:text-white hover:bg-white/5 rounded-xl transition-colors">
+                <iconify-icon icon="solar:wallet-linear" width="20"></iconify-icon> Revenue
+            </a>
+            <a href="facility-log.html"
+                class="flex items-center gap-3 px-4 py-3 text-slate-400 hover:text-white hover:bg-white/5 rounded-xl transition-colors">
+                <iconify-icon icon="solar:login-2-linear" width="20"></iconify-icon> Check-ins
+            </a>
+        </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="ml-64 flex-1 p-8">
+
+        <header class="flex justify-between items-center mb-8">
+            <div>
+                <h1 class="text-3xl font-dm-sans text-white font-light">Class Management</h1>
+                <p class="text-slate-500 text-sm">Schedule and manage gym classes</p>
+            </div>
+            <div class="flex gap-2">
+                <button class="bg-white/5 border border-white/10 text-white px-4 py-2 rounded-full text-sm">List
+                    View</button>
+                <button
+                    class="bg-white/5 border border-white/10 text-white px-4 py-2 rounded-full text-sm">Calendar</button>
+                <button
+                    class="bg-[#FACC15] text-neutral-900 px-6 py-2 rounded-full text-sm font-medium hover:bg-yellow-400 flex items-center gap-2">
+                    <iconify-icon icon="solar:add-circle-bold"></iconify-icon> Create Class
+                </button>
+            </div>
+        </header>
+
+        <!-- Classes Grid -->
+        <div class="grid grid-cols-1 gap-4">
+            <!-- Class Item -->
+            <div class="bg-neutral-900 border border-white/5 rounded-2xl p-6 flex items-center justify-between">
+                <div class="flex items-center gap-6">
+                    <div class="bg-white/5 rounded-xl px-4 py-2 text-center border border-white/5">
+                        <span class="block text-slate-400 text-xs">OCT</span>
+                        <span class="block text-xl font-bold text-white">24</span>
+                    </div>
+                    <div>
+                        <h3 class="text-xl text-white font-dm-sans">Morning HIIT</h3>
+                        <p class="text-slate-500 text-sm">08:00 AM - 09:00 AM • Room A</p>
+                    </div>
+                </div>
+
+                <div class="flex items-center gap-8">
+                    <div class="text-right">
+                        <p class="text-white font-medium">Emma Stone</p>
+                        <p class="text-xs text-slate-500">Trainer</p>
+                    </div>
+                    <div class="text-right">
+                        <p class="text-white font-medium">12/20</p>
+                        <p class="text-xs text-slate-500">Booked</p>
+                    </div>
+                    <div class="flex gap-2">
+                        <button
+                            class="p-2 text-slate-400 hover:text-white border border-white/10 rounded-full"><iconify-icon
+                                icon="solar:pen-linear"></iconify-icon></button>
+                        <button
+                            class="p-2 text-slate-400 hover:text-red-400 border border-white/10 rounded-full"><iconify-icon
+                                icon="solar:trash-bin-linear"></iconify-icon></button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Class Item -->
+            <div class="bg-neutral-900 border border-white/5 rounded-2xl p-6 flex items-center justify-between">
+                <div class="flex items-center gap-6">
+                    <div class="bg-white/5 rounded-xl px-4 py-2 text-center border border-white/5">
+                        <span class="block text-slate-400 text-xs">OCT</span>
+                        <span class="block text-xl font-bold text-white">24</span>
+                    </div>
+                    <div>
+                        <h3 class="text-xl text-white font-dm-sans">Yoga Flow</h3>
+                        <p class="text-slate-500 text-sm">10:00 AM - 11:00 AM • Room B</p>
+                    </div>
+                </div>
+
+                <div class="flex items-center gap-8">
+                    <div class="text-right">
+                        <p class="text-white font-medium">Sarah J.</p>
+                        <p class="text-xs text-slate-500">Trainer</p>
+                    </div>
+                    <div class="text-right">
+                        <p class="text-red-400 font-medium">20/20</p>
+                        <p class="text-xs text-slate-500">Full</p>
+                    </div>
+                    <div class="flex gap-2">
+                        <button
+                            class="p-2 text-slate-400 hover:text-white border border-white/10 rounded-full"><iconify-icon
+                                icon="solar:pen-linear"></iconify-icon></button>
+                        <button
+                            class="p-2 text-slate-400 hover:text-red-400 border border-white/10 rounded-full"><iconify-icon
+                                icon="solar:trash-bin-linear"></iconify-icon></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+</body>
+
+</html>

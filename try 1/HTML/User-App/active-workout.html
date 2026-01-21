@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FitFlow - Active Workout</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        .font-dm-sans {
+            font-family: 'DM Sans', sans-serif !important;
+        }
+
+        /* Custom Checkbox */
+        .check-input:checked+div {
+            background-color: #FACC15;
+            border-color: #FACC15;
+        }
+
+        .check-input:checked+div iconify-icon {
+            opacity: 1;
+            color: black;
+        }
+    </style>
+</head>
+
+<body class="bg-neutral-950 text-slate-300 min-h-screen flex justify-center">
+
+    <div class="w-full max-w-[402px] bg-black min-h-screen relative shadow-2xl flex flex-col">
+
+        <!-- Header -->
+        <header class="p-6 flex justify-between items-center bg-neutral-900 border-b border-white/10">
+            <div>
+                <h1 class="text-white font-dm-sans text-lg">Leg Day Destruction</h1>
+                <p class="text-xs text-slate-500">24:15 elapsed</p>
+            </div>
+            <button onclick="window.location.href='my-workouts.html'" class="text-[#FACC15] text-sm font-medium">End
+                Workout</button>
+        </header>
+
+        <main class="flex-1 overflow-y-auto p-6 space-y-6">
+
+            <!-- Current Exercise Card -->
+            <div class="space-y-4">
+                <img src="https://images.unsplash.com/photo-1574680096141-1cddd32e263f?w=800&auto=format&fit=crop"
+                    class="w-full h-48 object-cover rounded-3xl border border-white/10 opacity-80">
+
+                <div class="flex justify-between items-start">
+                    <h2 class="text-2xl font-dm-sans text-white">Barbell Squat</h2>
+                    <button
+                        class="w-8 h-8 rounded-full border border-white/10 flex items-center justify-center text-slate-400 hover:text-white">
+                        <iconify-icon icon="solar:info-circle-linear" width="20"></iconify-icon>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Sets Logger -->
+            <div class="space-y-2">
+                <!-- Header Row -->
+                <div class="grid grid-cols-10 gap-2 text-xs text-slate-500 uppercase tracking-widest text-center px-2">
+                    <div class="col-span-1">Set</div>
+                    <div class="col-span-3">kg</div>
+                    <div class="col-span-3">Reps</div>
+                    <div class="col-span-3">Done</div>
+                </div>
+
+                <!-- Set 1 -->
+                <div class="bg-neutral-900 rounded-2xl p-3 grid grid-cols-10 gap-2 items-center border border-white/5">
+                    <div class="col-span-1 text-center font-bold text-slate-500">1</div>
+                    <div class="col-span-3">
+                        <input type="number" value="60"
+                            class="w-full bg-black/50 border border-white/10 rounded-xl py-3 text-center text-white font-dm-sans text-lg focus:outline-none focus:border-[#FACC15]">
+                    </div>
+                    <div class="col-span-3">
+                        <input type="number" value="12"
+                            class="w-full bg-black/50 border border-white/10 rounded-xl py-3 text-center text-white font-dm-sans text-lg focus:outline-none focus:border-[#FACC15]">
+                    </div>
+                    <div class="col-span-3 flex justify-center">
+                        <label class="cursor-pointer">
+                            <input type="checkbox" class="hidden check-input" checked>
+                            <div
+                                class="w-12 h-12 rounded-xl border border-white/20 flex items-center justify-center transition-all bg-[#FACC15] border-[#FACC15]">
+                                <iconify-icon icon="solar:check-read-bold" width="24" class="text-black"></iconify-icon>
+                            </div>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Set 2 -->
+                <div class="bg-neutral-900 rounded-2xl p-3 grid grid-cols-10 gap-2 items-center border border-white/5">
+                    <div class="col-span-1 text-center font-bold text-slate-500">2</div>
+                    <div class="col-span-3">
+                        <input type="number" value="60"
+                            class="w-full bg-black/50 border border-white/10 rounded-xl py-3 text-center text-white font-dm-sans text-lg focus:outline-none focus:border-[#FACC15]">
+                    </div>
+                    <div class="col-span-3">
+                        <input type="number" value="10"
+                            class="w-full bg-black/50 border border-white/10 rounded-xl py-3 text-center text-white font-dm-sans text-lg focus:outline-none focus:border-[#FACC15]">
+                    </div>
+                    <div class="col-span-3 flex justify-center">
+                        <label class="cursor-pointer">
+                            <input type="checkbox" class="hidden check-input">
+                            <div
+                                class="w-12 h-12 rounded-xl border border-white/20 flex items-center justify-center transition-all">
+                                <iconify-icon icon="solar:check-read-bold" width="24" class="opacity-0"></iconify-icon>
+                            </div>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Set 3 -->
+                <div class="bg-neutral-900 rounded-2xl p-3 grid grid-cols-10 gap-2 items-center border border-white/5">
+                    <div class="col-span-1 text-center font-bold text-slate-500">3</div>
+                    <div class="col-span-3">
+                        <input type="number" value="60"
+                            class="w-full bg-black/50 border border-white/10 rounded-xl py-3 text-center text-white font-dm-sans text-lg focus:outline-none focus:border-[#FACC15]">
+                    </div>
+                    <div class="col-span-3">
+                        <input type="number" value="8"
+                            class="w-full bg-black/50 border border-white/10 rounded-xl py-3 text-center text-white font-dm-sans text-lg focus:outline-none focus:border-[#FACC15]">
+                    </div>
+                    <div class="col-span-3 flex justify-center">
+                        <label class="cursor-pointer">
+                            <input type="checkbox" class="hidden check-input">
+                            <div
+                                class="w-12 h-12 rounded-xl border border-white/20 flex items-center justify-center transition-all">
+                                <iconify-icon icon="solar:check-read-bold" width="24" class="opacity-0"></iconify-icon>
+                            </div>
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <button
+                class="w-full py-4 rounded-full border border-dashed border-white/20 text-slate-400 text-sm hover:bg-white/5 transition-colors">
+                + Add Set
+            </button>
+
+        </main>
+
+        <!-- Footer sticky controls -->
+        <div class="bg-neutral-900 border-t border-white/10 p-6">
+            <div class="flex items-center gap-4 max-w-md mx-auto">
+                <div class="flex-1 bg-white/5 rounded-full px-4 py-3 flex items-center gap-3">
+                    <iconify-icon icon="solar:clock-circle-linear" class="text-[#FACC15]"></iconify-icon>
+                    <span class="text-white font-mono">01:30</span>
+                    <span class="text-xs text-slate-500 ml-auto">Rest Timer</span>
+                </div>
+                <button
+                    class="w-14 h-14 rounded-full bg-[#FACC15] flex items-center justify-center text-black shadow-lg shadow-yellow-500/10">
+                    <iconify-icon icon="solar:skip-next-bold" width="24"></iconify-icon>
+                </button>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>

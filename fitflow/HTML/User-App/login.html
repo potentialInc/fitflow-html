@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FitFlow - Login</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=DM+Sans:wght@400;500;700&display=swap"
+        rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        .font-dm-sans {
+            font-family: 'DM Sans', sans-serif !important;
+        }
+    </style>
+</head>
+
+<body class="bg-[#0f0f11] text-slate-300 min-h-screen flex items-center justify-center p-4">
+
+    <!-- Mobile Container -->
+    <div class="w-full max-w-[402px] bg-[#0f0f11] min-h-screen flex flex-col relative">
+
+        <!-- Header Image -->
+        <div
+            class="absolute inset-0 top-0 h-[40%] bg-gradient-to-b from-[#22C55E]/20 to-[#0f0f11] z-0 pointer-events-none">
+        </div>
+
+        <div class="relative z-10 flex-1 flex flex-col justify-center px-6 py-12">
+
+            <!-- Header -->
+            <div class="mb-10 text-center">
+                <div
+                    class="inline-flex items-center justify-center w-16 h-16 bg-[#22C55E] rounded-2xl mb-6 shadow-lg shadow-[#22C55E]/20">
+                    <iconify-icon icon="solar:dumbbell-large-minimalistic-bold" width="32"
+                        class="text-[#0f0f11]"></iconify-icon>
+                </div>
+                <h1 class="text-3xl font-dm-sans font-bold text-white mb-2">Welcome Back</h1>
+                <p class="text-slate-400">Sign in to continue your fitness journey</p>
+            </div>
+
+            <!-- Form -->
+            <form action="member-home.html" class="space-y-6">
+                <!-- Email -->
+                <div class="space-y-2">
+                    <label class="text-sm font-medium text-slate-400 ml-1">Email address</label>
+                    <div class="relative group">
+                        <input type="email" placeholder="name@example.com"
+                            class="w-full bg-[#1a1a1a] border border-white/5 rounded-2xl px-5 py-4 text-white placeholder-slate-600 focus:outline-none focus:border-[#22C55E] focus:ring-1 focus:ring-[#22C55E] transition-all">
+                        <iconify-icon icon="solar:letter-linear"
+                            class="absolute right-5 top-1/2 -translate-y-1/2 text-slate-500 group-focus-within:text-[#22C55E] transition-colors"
+                            width="20"></iconify-icon>
+                    </div>
+                </div>
+
+                <!-- Password -->
+                <div class="space-y-2">
+                    <div class="flex justify-between items-center ml-1">
+                        <label class="text-sm font-medium text-slate-400">Password</label>
+                        <a href="forgot-password.html"
+                            class="text-xs font-medium text-[#22C55E] hover:text-[#22C55E]/80 transition-colors">Forgot
+                            password?</a>
+                    </div>
+                    <div class="relative group">
+                        <input type="password" placeholder="Enter your password"
+                            class="w-full bg-[#1a1a1a] border border-white/5 rounded-2xl px-5 py-4 text-white placeholder-slate-600 focus:outline-none focus:border-[#22C55E] focus:ring-1 focus:ring-[#22C55E] transition-all">
+                        <iconify-icon icon="solar:lock-password-linear"
+                            class="absolute right-5 top-1/2 -translate-y-1/2 text-slate-500 group-focus-within:text-[#22C55E] transition-colors"
+                            width="20"></iconify-icon>
+                    </div>
+                </div>
+
+                <!-- Login Button -->
+                <button type="submit"
+                    class="w-full bg-[#22C55E] hover:bg-[#16a34a] text-[#0f0f11] font-bold rounded-2xl py-4 transition-all transform active:scale-[0.98] shadow-lg shadow-[#22C55E]/20 text-base">
+                    Log In
+                </button>
+            </form>
+
+            <div class="my-8 flex items-center gap-4">
+                <div class="h-px bg-white/10 flex-1"></div>
+                <span class="text-xs font-medium text-slate-500 uppercase">Or continue with</span>
+                <div class="h-px bg-white/10 flex-1"></div>
+            </div>
+
+            <!-- Social Login -->
+            <div class="grid grid-cols-2 gap-4">
+                <button
+                    class="flex items-center justify-center gap-2 bg-[#1a1a1a] hover:bg-[#252525] border border-white/5 rounded-2xl py-3.5 transition-colors">
+                    <iconify-icon icon="logos:google-icon" width="20"></iconify-icon>
+                    <span class="text-sm font-medium text-white">Google</span>
+                </button>
+                <button
+                    class="flex items-center justify-center gap-2 bg-[#1a1a1a] hover:bg-[#252525] border border-white/5 rounded-2xl py-3.5 transition-colors">
+                    <iconify-icon icon="logos:apple" width="20" class="text-white"></iconify-icon>
+                    <span class="text-sm font-medium text-white">Apple</span>
+                </button>
+            </div>
+
+            <!-- Sign Up Link -->
+            <p class="mt-8 text-center text-sm text-slate-400">
+                Don't have an account?
+                <a href="signup.html" class="font-bold text-[#22C55E] hover:underline">Create Account</a>
+            </p>
+
+        </div>
+    </div>
+
+</body>
+
+</html>

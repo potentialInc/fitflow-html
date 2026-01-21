@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FitFlow Trainer - Schedule</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        .font-dm-sans {
+            font-family: 'DM Sans', sans-serif !important;
+        }
+    </style>
+</head>
+
+<body class="bg-neutral-950 text-slate-300 min-h-screen flex justify-center">
+
+    <div class="w-full max-w-[402px] bg-[#0f0f11] min-h-screen relative shadow-2xl pb-24">
+
+        <!-- Header -->
+        <header class="p-6 sticky top-0 bg-[#0f0f11] z-40 bg-opacity-95 backdrop-blur">
+            <div class="flex justify-between items-center mb-6">
+                <h1 class="text-2xl font-dm-sans font-light text-white">Full Schedule</h1>
+                <button class="bg-[#FACC15] text-neutral-900 px-4 py-2 rounded-full text-xs font-semibold">
+                    + Block Time
+                </button>
+            </div>
+
+            <!-- Month Navigation -->
+            <div class="flex items-center justify-between bg-white/5 rounded-full p-2 border border-white/5">
+                <button class="w-8 h-8 flex items-center justify-center hover:bg-white/5 rounded-full"><iconify-icon
+                        icon="solar:alt-arrow-left-linear"></iconify-icon></button>
+                <span class="text-white font-medium">October 2024</span>
+                <button class="w-8 h-8 flex items-center justify-center hover:bg-white/5 rounded-full"><iconify-icon
+                        icon="solar:alt-arrow-right-linear"></iconify-icon></button>
+            </div>
+        </header>
+
+        <main class="px-6">
+
+            <!-- Calendar Grid Mockup (Week View) -->
+            <div class="grid grid-cols-8 gap-y-6 text-xs text-center border-t border-white/5 pt-4">
+                <!-- Time Column -->
+                <div class="col-span-1 space-y-12 text-slate-500 pt-2">
+                    <div>9AM</div>
+                    <div>10AM</div>
+                    <div>11AM</div>
+                    <div>12PM</div>
+                    <div>1PM</div>
+                </div>
+
+                <!-- Days Columns -->
+                <div class="col-span-7 relative h-[400px]">
+                    <!-- Horizontal Grid Lines -->
+                    <div class="absolute inset-0 flex flex-col justify-between pointer-events-none opacity-10">
+                        <div class="h-px w-full bg-white"></div>
+                        <div class="h-px w-full bg-white"></div>
+                        <div class="h-px w-full bg-white"></div>
+                        <div class="h-px w-full bg-white"></div>
+                        <div class="h-px w-full bg-white"></div>
+                    </div>
+
+                    <!-- Event Block 1 -->
+                    <div
+                        class="absolute top-[0%] left-[5%] w-[40%] h-[18%] bg-[#FACC15] rounded-xl p-2 text-neutral-900 shadow-lg">
+                        <p class="font-bold truncate">Sarah C.</p>
+                    </div>
+
+                    <!-- Event Block 2 -->
+                    <div
+                        class="absolute top-[22%] left-[50%] w-[40%] h-[18%] bg-white rounded-xl p-2 text-neutral-900 shadow-lg border border-white/20">
+                        <p class="font-bold truncate">David</p>
+                    </div>
+
+                    <!-- Blocked Time -->
+                    <div
+                        class="absolute top-[60%] left-[0%] w-full h-[18%] bg-white/5 border border-white/10 rounded-xl p-2 flex items-center justify-center">
+                        <p class="text-slate-500 truncate">Lunch Break</p>
+                    </div>
+
+                </div>
+            </div>
+
+        </main>
+
+        <!-- Navbar -->
+        <nav
+            class="fixed bottom-0 left-1/2 -translate-x-1/2 w-full max-w-[402px] bg-[#0f0f11]/90 backdrop-blur-lg border-t border-white/10 px-6 py-4 z-50">
+            <div class="flex justify-between items-center max-w-md mx-auto text-slate-400">
+                <a href="trainer-home.html" class="flex flex-col items-center gap-1 hover:text-white transition-colors">
+                    <iconify-icon icon="solar:home-smile-linear" width="24"></iconify-icon>
+                    <span class="text-[10px] font-medium">Home</span>
+                </a>
+                <a href="schedule.html" class="flex flex-col items-center gap-1 text-[#FACC15]">
+                    <iconify-icon icon="solar:calendar-mark-linear" width="24"></iconify-icon>
+                    <span class="text-[10px] font-medium">Schedule</span>
+                </a>
+                <a href="clients-list.html" class="flex flex-col items-center gap-1 hover:text-white transition-colors">
+                    <iconify-icon icon="solar:users-group-rounded-linear" width="24"></iconify-icon>
+                    <span class="text-[10px] font-medium">Clients</span>
+                </a>
+                <a href="create-plan.html" class="flex flex-col items-center gap-1 hover:text-white transition-colors">
+                    <iconify-icon icon="solar:dumbbell-small-linear" width="24"></iconify-icon>
+                    <span class="text-[10px] font-medium">Plans</span>
+                </a>
+            </div>
+        </nav>
+
+    </div>
+</body>
+
+</html>

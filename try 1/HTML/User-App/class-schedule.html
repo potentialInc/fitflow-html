@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FitFlow - Class Schedule</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        .font-dm-sans {
+            font-family: 'DM Sans', sans-serif !important;
+        }
+
+        .hide-scroll::-webkit-scrollbar {
+            display: none;
+        }
+    </style>
+</head>
+
+<body class="bg-neutral-950 text-slate-300 min-h-screen flex justify-center">
+
+    <div class="w-full max-w-[402px] bg-[#0f0f11] min-h-screen relative shadow-2xl pb-24">
+
+        <!-- Header -->
+        <header class="pt-6 px-6 pb-2 sticky top-0 bg-[#0f0f11] z-40">
+            <div class="flex justify-between items-center mb-6">
+                <h1 class="text-2xl font-dm-sans font-light text-white">Class Schedule</h1>
+                <div class="flex gap-2">
+                    <button
+                        class="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-white">
+                        <iconify-icon icon="solar:filter-linear" width="20"></iconify-icon>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Date Strip logic: Horizontal scroll -->
+            <div class="flex gap-3 overflow-x-auto hide-scroll pb-2">
+                <!-- Active Day -->
+                <button
+                    class="flex flex-col items-center bg-[#FACC15] text-neutral-900 rounded-2xl min-w-[60px] p-2 space-y-1 shadow-lg shadow-yellow-500/10">
+                    <span class="text-xs font-semibold">Today</span>
+                    <span class="text-lg font-bold font-dm-sans">21</span>
+                </button>
+                <!-- Inactive Day -->
+                <button
+                    class="flex flex-col items-center bg-white/5 border border-white/10 text-slate-400 rounded-2xl min-w-[60px] p-2 space-y-1 hover:bg-white/10 transition-colors">
+                    <span class="text-xs font-medium">Tue</span>
+                    <span class="text-lg font-dm-sans">22</span>
+                </button>
+                <button
+                    class="flex flex-col items-center bg-white/5 border border-white/10 text-slate-400 rounded-2xl min-w-[60px] p-2 space-y-1 hover:bg-white/10 transition-colors">
+                    <span class="text-xs font-medium">Wed</span>
+                    <span class="text-lg font-dm-sans">23</span>
+                </button>
+                <button
+                    class="flex flex-col items-center bg-white/5 border border-white/10 text-slate-400 rounded-2xl min-w-[60px] p-2 space-y-1 hover:bg-white/10 transition-colors">
+                    <span class="text-xs font-medium">Thu</span>
+                    <span class="text-lg font-dm-sans">24</span>
+                </button>
+                <button
+                    class="flex flex-col items-center bg-white/5 border border-white/10 text-slate-400 rounded-2xl min-w-[60px] p-2 space-y-1 hover:bg-white/10 transition-colors">
+                    <span class="text-xs font-medium">Fri</span>
+                    <span class="text-lg font-dm-sans">25</span>
+                </button>
+            </div>
+        </header>
+
+        <main class="px-6 space-y-4 mt-2">
+
+            <!-- Class Card 1 (Bookable) -->
+            <div onclick="window.location.href='class-detail.html'"
+                class="bg-neutral-900 border border-white/5 rounded-[2rem] p-5 active:scale-[0.98] transition-transform">
+                <div class="flex justify-between items-start mb-4">
+                    <div>
+                        <h3 class="text-lg font-medium text-white font-dm-sans">Morning Yoga</h3>
+                        <p class="text-sm text-slate-400">08:00 AM • 60 min</p>
+                    </div>
+                    <span
+                        class="bg-green-500/10 text-green-500 px-3 py-1 rounded-full text-xs font-medium">Available</span>
+                </div>
+
+                <div class="flex items-center gap-3 mb-4">
+                    <div class="w-8 h-8 rounded-full bg-slate-700 overflow-hidden">
+                        <img src="https://randomuser.me/api/portraits/women/65.jpg" class="w-full h-full object-cover">
+                    </div>
+                    <span class="text-sm text-slate-300">with Emma Stone</span>
+                </div>
+
+                <div class="flex justify-between items-center border-t border-white/5 pt-4">
+                    <div class="text-xs text-slate-500">
+                        <strong class="text-white">12</strong>/20 spots left
+                    </div>
+                    <button
+                        class="bg-white/5 hover:bg-white/10 text-white px-4 py-2 rounded-full text-xs font-medium transition-colors">
+                        View Details
+                    </button>
+                </div>
+            </div>
+
+            <!-- Class Card 2 (Full) -->
+            <div class="bg-neutral-900 border border-white/5 rounded-[2rem] p-5 opacity-75">
+                <div class="flex justify-between items-start mb-4">
+                    <div>
+                        <h3 class="text-lg font-medium text-white font-dm-sans">CrossFit Intro</h3>
+                        <p class="text-sm text-slate-400">10:00 AM • 45 min</p>
+                    </div>
+                    <span class="bg-red-500/10 text-red-500 px-3 py-1 rounded-full text-xs font-medium">Full</span>
+                </div>
+
+                <div class="flex items-center gap-3 mb-4">
+                    <div class="w-8 h-8 rounded-full bg-slate-700 overflow-hidden">
+                        <img src="https://randomuser.me/api/portraits/men/32.jpg" class="w-full h-full object-cover">
+                    </div>
+                    <span class="text-sm text-slate-300">with Alex Chen</span>
+                </div>
+
+                <div class="flex justify-between items-center border-t border-white/5 pt-4">
+                    <div class="text-xs text-slate-500">
+                        <strong class="text-white">20</strong>/20 spots left
+                    </div>
+                    <button
+                        class="border border-white/10 text-slate-500 px-4 py-2 rounded-full text-xs font-medium cursor-not-allowed">
+                        Waitlist
+                    </button>
+                </div>
+            </div>
+
+            <!-- Class Card 3 -->
+            <div onclick="window.location.href='class-detail.html'"
+                class="bg-neutral-900 border border-white/5 rounded-[2rem] p-5 active:scale-[0.98] transition-transform">
+                <div class="flex justify-between items-start mb-4">
+                    <div>
+                        <h3 class="text-lg font-medium text-white font-dm-sans">HIIT Cardio</h3>
+                        <p class="text-sm text-slate-400">05:30 PM • 45 min</p>
+                    </div>
+                    <span
+                        class="bg-green-500/10 text-green-500 px-3 py-1 rounded-full text-xs font-medium">Available</span>
+                </div>
+
+                <div class="flex items-center gap-3 mb-4">
+                    <div class="w-8 h-8 rounded-full bg-slate-700 overflow-hidden">
+                        <img src="https://randomuser.me/api/portraits/women/44.jpg" class="w-full h-full object-cover">
+                    </div>
+                    <span class="text-sm text-slate-300">with Sarah J.</span>
+                </div>
+
+                <div class="flex justify-between items-center border-t border-white/5 pt-4">
+                    <div class="text-xs text-slate-500">
+                        <strong class="text-white">5</strong>/20 spots left
+                    </div>
+                    <button
+                        class="bg-white/5 hover:bg-white/10 text-white px-4 py-2 rounded-full text-xs font-medium transition-colors">
+                        View Details
+                    </button>
+                </div>
+            </div>
+
+        </main>
+
+        <!-- Navbar -->
+        <nav
+            class="fixed bottom-0 left-1/2 -translate-x-1/2 w-full max-w-[402px] bg-[#0f0f11]/90 backdrop-blur-lg border-t border-white/10 px-6 py-4 z-50">
+            <div class="flex justify-between items-center max-w-md mx-auto text-slate-400">
+                <a href="home.html" class="flex flex-col items-center gap-1 hover:text-white transition-colors">
+                    <iconify-icon icon="solar:home-smile-linear" width="24"></iconify-icon>
+                    <span class="text-[10px] font-medium">Home</span>
+                </a>
+                <a href="class-schedule.html" class="flex flex-col items-center gap-1 text-[#FACC15]">
+                    <iconify-icon icon="solar:calendar-mark-linear" width="24"></iconify-icon>
+                    <span class="text-[10px] font-medium">Classes</span>
+                </a>
+                <a href="trainer-list.html" class="flex flex-col items-center gap-1 hover:text-white transition-colors">
+                    <iconify-icon icon="solar:users-group-rounded-linear" width="24"></iconify-icon>
+                    <span class="text-[10px] font-medium">Trainers</span>
+                </a>
+                <a href="my-workouts.html" class="flex flex-col items-center gap-1 hover:text-white transition-colors">
+                    <iconify-icon icon="solar:dumbbell-small-linear" width="24"></iconify-icon>
+                    <span class="text-[10px] font-medium">Workouts</span>
+                </a>
+                <a href="profile.html" class="flex flex-col items-center gap-1 hover:text-white transition-colors">
+                    <iconify-icon icon="solar:user-circle-linear" width="24"></iconify-icon>
+                    <span class="text-[10px] font-medium">Profile</span>
+                </a>
+            </div>
+        </nav>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FitFlow - Exercise Library</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=DM+Sans:wght@400;500;700&display=swap"
+        rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        .font-dm-sans {
+            font-family: 'DM Sans', sans-serif !important;
+        }
+
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+
+<body class="bg-[#0f0f11] text-slate-300 min-h-screen pb-24">
+
+    <!-- Mobile Container -->
+    <div class="w-full max-w-[402px] mx-auto bg-[#0f0f11] min-h-screen relative px-6 py-8">
+
+        <!-- Header -->
+        <div class="flex items-center justify-between mb-8">
+            <a href="workouts.html"
+                class="w-10 h-10 rounded-full bg-[#1a1a1a] flex items-center justify-center text-slate-400 hover:text-white transition-colors">
+                <iconify-icon icon="solar:arrow-left-linear" width="24"></iconify-icon>
+            </a>
+            <h1 class="text-lg font-dm-sans font-bold text-white">Exercises</h1>
+            <div class="w-10"></div>
+        </div>
+
+        <!-- Search -->
+        <div class="relative group mb-6">
+            <input type="text" placeholder="Search exercises..."
+                class="w-full bg-[#1a1a1a] border border-white/5 rounded-2xl pl-12 pr-5 py-4 text-white placeholder-slate-600 focus:outline-none focus:border-[#22C55E] focus:ring-1 focus:ring-[#22C55E] transition-all">
+            <iconify-icon icon="solar:magnifer-linear"
+                class="absolute left-5 top-1/2 -translate-y-1/2 text-slate-500 group-focus-within:text-[#22C55E] transition-colors"
+                width="20"></iconify-icon>
+        </div>
+
+        <!-- Filters -->
+        <div class="flex gap-2 mb-6 overflow-x-auto no-scrollbar">
+            <button class="whitespace-nowrap bg-white text-black px-4 py-2 rounded-full text-xs font-bold">All</button>
+            <button
+                class="whitespace-nowrap bg-[#1a1a1a] text-slate-400 border border-white/10 px-4 py-2 rounded-full text-xs font-medium">Chest</button>
+            <button
+                class="whitespace-nowrap bg-[#1a1a1a] text-slate-400 border border-white/10 px-4 py-2 rounded-full text-xs font-medium">Back</button>
+            <button
+                class="whitespace-nowrap bg-[#1a1a1a] text-slate-400 border border-white/10 px-4 py-2 rounded-full text-xs font-medium">Legs</button>
+            <button
+                class="whitespace-nowrap bg-[#1a1a1a] text-slate-400 border border-white/10 px-4 py-2 rounded-full text-xs font-medium">Core</button>
+        </div>
+
+        <!-- List -->
+        <main class="grid grid-cols-2 gap-4">
+
+            <!-- Item -->
+            <div class="bg-[#1a1a1a] p-3 rounded-2xl border border-white/5 active:scale-[0.98] transition-transform">
+                <div class="aspect-video bg-[#252525] rounded-xl mb-3 relative overflow-hidden">
+                    <iconify-icon icon="solar:play-circle-bold"
+                        class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-white/50 text-3xl"></iconify-icon>
+                </div>
+                <h3 class="text-sm font-bold text-white leading-tight mb-1">Bench Press</h3>
+                <p class="text-[10px] text-slate-500">Chest, Triceps</p>
+            </div>
+
+            <!-- Item -->
+            <div class="bg-[#1a1a1a] p-3 rounded-2xl border border-white/5 active:scale-[0.98] transition-transform">
+                <div class="aspect-video bg-[#252525] rounded-xl mb-3 relative overflow-hidden">
+                    <iconify-icon icon="solar:play-circle-bold"
+                        class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-white/50 text-3xl"></iconify-icon>
+                </div>
+                <h3 class="text-sm font-bold text-white leading-tight mb-1">Squat</h3>
+                <p class="text-[10px] text-slate-500">Quads, Glutes</p>
+            </div>
+
+            <!-- Item -->
+            <div class="bg-[#1a1a1a] p-3 rounded-2xl border border-white/5 active:scale-[0.98] transition-transform">
+                <div class="aspect-video bg-[#252525] rounded-xl mb-3 relative overflow-hidden">
+                    <iconify-icon icon="solar:play-circle-bold"
+                        class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-white/50 text-3xl"></iconify-icon>
+                </div>
+                <h3 class="text-sm font-bold text-white leading-tight mb-1">Deadlift</h3>
+                <p class="text-[10px] text-slate-500">Back, Hamstrings</p>
+            </div>
+
+            <!-- Item -->
+            <div class="bg-[#1a1a1a] p-3 rounded-2xl border border-white/5 active:scale-[0.98] transition-transform">
+                <div class="aspect-video bg-[#252525] rounded-xl mb-3 relative overflow-hidden">
+                    <iconify-icon icon="solar:play-circle-bold"
+                        class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-white/50 text-3xl"></iconify-icon>
+                </div>
+                <h3 class="text-sm font-bold text-white leading-tight mb-1">Shoulder Press</h3>
+                <p class="text-[10px] text-slate-500">Shoulders</p>
+            </div>
+
+        </main>
+
+    </div>
+
+</body>
+
+</html>

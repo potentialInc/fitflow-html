@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FitFlow - Settings</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=DM+Sans:wght@400;500;700&display=swap"
+        rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        .font-dm-sans {
+            font-family: 'DM Sans', sans-serif !important;
+        }
+
+        /* Toggle Switch */
+        .toggle-checkbox:checked {
+            right: 0;
+            border-color: #22C55E;
+        }
+
+        .toggle-checkbox:checked+.toggle-label {
+            background-color: #22C55E;
+        }
+    </style>
+</head>
+
+<body class="bg-[#0f0f11] text-slate-300 min-h-screen">
+
+    <!-- Mobile Container -->
+    <div class="w-full max-w-[402px] mx-auto bg-[#0f0f11] min-h-screen relative px-6 py-8">
+
+        <!-- Header -->
+        <div class="flex items-center justify-between mb-8">
+            <a href="profile.html"
+                class="w-10 h-10 rounded-full bg-[#1a1a1a] flex items-center justify-center text-slate-400 hover:text-white transition-colors">
+                <iconify-icon icon="solar:arrow-left-linear" width="24"></iconify-icon>
+            </a>
+            <h1 class="text-lg font-dm-sans font-bold text-white">Settings</h1>
+            <div class="w-10"></div>
+        </div>
+
+        <!-- Section -->
+        <div class="mb-8">
+            <h3 class="text-xs font-bold text-slate-500 uppercase tracking-widest mb-4 pl-1">Account</h3>
+            <div class="space-y-2">
+                <a href="#"
+                    class="bg-[#1a1a1a] p-4 rounded-2xl border border-white/5 flex items-center justify-between group">
+                    <span class="text-sm font-medium text-white">Edit Profile</span>
+                    <iconify-icon icon="solar:alt-arrow-right-linear"
+                        class="text-slate-500 group-hover:text-white transition-colors"></iconify-icon>
+                </a>
+                <a href="#"
+                    class="bg-[#1a1a1a] p-4 rounded-2xl border border-white/5 flex items-center justify-between group">
+                    <span class="text-sm font-medium text-white">Change Password</span>
+                    <iconify-icon icon="solar:alt-arrow-right-linear"
+                        class="text-slate-500 group-hover:text-white transition-colors"></iconify-icon>
+                </a>
+                <a href="#"
+                    class="bg-[#1a1a1a] p-4 rounded-2xl border border-white/5 flex items-center justify-between group">
+                    <span class="text-sm font-medium text-white">Privacy Settings</span>
+                    <iconify-icon icon="solar:alt-arrow-right-linear"
+                        class="text-slate-500 group-hover:text-white transition-colors"></iconify-icon>
+                </a>
+            </div>
+        </div>
+
+        <!-- Section -->
+        <div class="mb-8">
+            <h3 class="text-xs font-bold text-slate-500 uppercase tracking-widest mb-4 pl-1">Preferences</h3>
+            <div class="space-y-2">
+                <div class="bg-[#1a1a1a] p-4 rounded-2xl border border-white/5 flex items-center justify-between">
+                    <span class="text-sm font-medium text-white">Push Notifications</span>
+                    <!-- Simple Toggle -->
+                    <div
+                        class="relative inline-block w-10 h-6 align-middle select-none transition duration-200 ease-in">
+                        <input type="checkbox" checked
+                            class="toggle-checkbox absolute block w-4 h-4 rounded-full bg-white border-4 appearance-none cursor-pointer translate-x-4" />
+                        <div class="toggle-label block overflow-hidden h-6 rounded-full bg-[#22C55E] cursor-pointer">
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-[#1a1a1a] p-4 rounded-2xl border border-white/5 flex items-center justify-between">
+                    <span class="text-sm font-medium text-white">Dark Mode</span>
+                    <div
+                        class="relative inline-block w-10 h-6 align-middle select-none transition duration-200 ease-in">
+                        <input type="checkbox" checked
+                            class="toggle-checkbox absolute block w-4 h-4 rounded-full bg-white border-4 appearance-none cursor-pointer translate-x-4" />
+                        <div class="toggle-label block overflow-hidden h-6 rounded-full bg-[#22C55E] cursor-pointer">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section -->
+        <div class="mb-8">
+            <h3 class="text-xs font-bold text-slate-500 uppercase tracking-widest mb-4 pl-1">Support</h3>
+            <div class="space-y-2">
+                <a href="#"
+                    class="bg-[#1a1a1a] p-4 rounded-2xl border border-white/5 flex items-center justify-between group">
+                    <span class="text-sm font-medium text-white">Help Center</span>
+                    <iconify-icon icon="solar:question-circle-linear"
+                        class="text-slate-500 group-hover:text-white transition-colors"></iconify-icon>
+                </a>
+                <a href="#"
+                    class="bg-[#1a1a1a] p-4 rounded-2xl border border-white/5 flex items-center justify-between group">
+                    <span class="text-sm font-medium text-white">Terms of Service</span>
+                    <iconify-icon icon="solar:document-text-linear"
+                        class="text-slate-500 group-hover:text-white transition-colors"></iconify-icon>
+                </a>
+            </div>
+        </div>
+
+        <button onclick="document.getElementById('logoutModal').classList.remove('hidden')"
+            class="w-full text-red-500 text-sm font-bold py-4 hover:bg-red-500/10 rounded-2xl transition-colors">
+            Log Out
+        </button>
+
+        <!-- Logout Modal -->
+        <div id="logoutModal"
+            class="hidden fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm p-6">
+            <div
+                class="bg-[#1a1a1a] w-full max-w-[320px] rounded-3xl p-6 border border-white/10 text-center animate-scale-in">
+                <div
+                    class="w-12 h-12 rounded-full bg-red-500/10 text-red-500 flex items-center justify-center mx-auto mb-4">
+                    <iconify-icon icon="solar:logout-2-bold" width="24"></iconify-icon>
+                </div>
+                <h3 class="text-lg font-bold text-white font-dm-sans mb-2">Log Out?</h3>
+                <p class="text-sm text-slate-400 mb-6">Are you sure you want to sign out of your account?</p>
+                <div class="grid grid-cols-2 gap-3">
+                    <button onclick="document.getElementById('logoutModal').classList.add('hidden')"
+                        class="py-3 rounded-xl bg-[#252525] text-white font-bold hover:bg-white/10 transition-colors">Cancel</button>
+                    <a href="login.html"
+                        class="flex items-center justify-center py-3 rounded-xl bg-red-500 text-white font-bold hover:bg-red-600 transition-colors">Log
+                        Out</a>
+                </div>
+            </div>
+        </div>
+
+        <style>
+            @keyframes scale-in {
+                from {
+                    transform: scale(0.95);
+                    opacity: 0;
+                }
+
+                to {
+                    transform: scale(1);
+                    opacity: 1;
+                }
+            }
+
+            .animate-scale-in {
+                animation: scale-in 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+            }
+        </style>
+
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FitFlow Admin - Facility</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=DM+Sans:wght@400;500;700&display=swap"
+        rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        .font-dm-sans {
+            font-family: 'DM Sans', sans-serif !important;
+        }
+    </style>
+</head>
+
+<body class="bg-[#0f0f11] text-slate-300 font-inter h-screen flex overflow-hidden">
+
+    <!-- Sidebar -->
+    <aside class="w-64 bg-[#1a1a1a] border-r border-white/5 flex flex-col h-full">
+        <!-- Logo -->
+        <div class="h-16 flex items-center px-6 border-b border-white/5">
+            <div class="flex items-center gap-2 text-[#22C55E]">
+                <iconify-icon icon="solar:dumbbell-large-minimalistic-bold" width="24"></iconify-icon>
+                <span class="font-dm-sans font-bold text-xl text-white tracking-tight">FitFlow</span>
+            </div>
+        </div>
+
+        <nav class="flex-1 px-3 py-6 space-y-1">
+            <a href="admin-dashboard.html"
+                class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-400 hover:text-white hover:bg-white/5 transition-colors">
+                <iconify-icon icon="solar:widget-linear" width="20"></iconify-icon>
+                Dashboard
+            </a>
+            <div class="pt-4 pb-2 px-3 text-[10px] font-bold text-slate-500 uppercase tracking-wider">Management</div>
+            <a href="users.html"
+                class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-400 hover:text-white hover:bg-white/5 transition-colors">
+                <iconify-icon icon="solar:users-group-rounded-linear" width="20"></iconify-icon>
+                Users & Roles
+            </a>
+            <a href="facility.html"
+                class="flex items-center gap-3 px-3 py-2.5 rounded-lg bg-[#22C55E]/10 text-[#22C55E] font-medium transition-colors">
+                <iconify-icon icon="solar:buildings-linear" width="20"></iconify-icon>
+                Facility
+            </a>
+            <div class="pt-4 pb-2 px-3 text-[10px] font-bold text-slate-500 uppercase tracking-wider">Content</div>
+            <a href="content-cms.html"
+                class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-400 hover:text-white hover:bg-white/5 transition-colors">
+                <iconify-icon icon="solar:library-linear" width="20"></iconify-icon>
+                Content CMS
+            </a>
+            <div class="pt-4 pb-2 px-3 text-[10px] font-bold text-slate-500 uppercase tracking-wider">Analytics</div>
+            <a href="reports.html"
+                class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-400 hover:text-white hover:bg-white/5 transition-colors">
+                <iconify-icon icon="solar:chart-square-linear" width="20"></iconify-icon>
+                Reports
+            </a>
+        </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="flex-1 flex flex-col overflow-hidden">
+
+        <!-- Top Bar -->
+        <header class="h-16 border-b border-white/5 bg-[#0f0f11] flex items-center justify-between px-8">
+            <h1 class="text-xl font-bold text-white font-dm-sans">Facility Management</h1>
+        </header>
+
+        <div class="flex-1 overflow-y-auto p-8">
+
+            <!-- Live Occupancy Grid -->
+            <div class="grid grid-cols-2 gap-6 mb-8">
+
+                <!-- Main Gym Floor -->
+                <div class="bg-[#1a1a1a] p-6 rounded-2xl border border-white/5 relative overflow-hidden">
+                    <div class="flex justify-between items-start mb-4">
+                        <div>
+                            <h3 class="text-lg font-bold text-white">Main Gym Floor</h3>
+                            <p class="text-sm text-slate-500">Current Occupancy</p>
+                        </div>
+                        <span
+                            class="bg-red-500/10 text-red-500 px-2 py-0.5 rounded text-xs font-bold uppercase animate-pulse">High
+                            Traffic</span>
+                    </div>
+
+                    <div class="flex items-end gap-2 mb-2">
+                        <span class="text-4xl font-bold text-white font-dm-sans">42</span>
+                        <span class="text-sm text-slate-500 mb-1">/ 60 Capacity</span>
+                    </div>
+
+                    <div class="w-full bg-white/10 h-2 rounded-full overflow-hidden">
+                        <div class="bg-red-500 w-[70%] h-full rounded-full"></div>
+                    </div>
+                </div>
+
+                <!-- Studio A -->
+                <div class="bg-[#1a1a1a] p-6 rounded-2xl border border-white/5 relative overflow-hidden">
+                    <div class="flex justify-between items-start mb-4">
+                        <div>
+                            <h3 class="text-lg font-bold text-white">Studio A</h3>
+                            <p class="text-sm text-slate-500">Class in Session: Yoga Flow</p>
+                        </div>
+                        <span
+                            class="bg-[#22C55E]/10 text-[#22C55E] px-2 py-0.5 rounded text-xs font-bold uppercase">Active</span>
+                    </div>
+
+                    <div class="flex items-end gap-2 mb-2">
+                        <span class="text-4xl font-bold text-white font-dm-sans">18</span>
+                        <span class="text-sm text-slate-500 mb-1">/ 25 Capacity</span>
+                    </div>
+
+                    <div class="w-full bg-white/10 h-2 rounded-full overflow-hidden">
+                        <div class="bg-[#22C55E] w-[72%] h-full rounded-full"></div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Maintenance Status -->
+            <h3 class="text-lg font-bold text-white mb-4">Equipment Status</h3>
+            <div class="grid grid-cols-3 gap-6">
+
+                <!-- Item -->
+                <div class="bg-[#1a1a1a] p-4 rounded-xl border border-white/5 flex items-center justify-between">
+                    <div class="flex items-center gap-3">
+                        <div
+                            class="w-10 h-10 rounded-full bg-[#22C55E]/10 text-[#22C55E] flex items-center justify-center">
+                            <iconify-icon icon="solar:check-circle-bold" width="20"></iconify-icon>
+                        </div>
+                        <div>
+                            <h4 class="text-sm font-bold text-white">Treadmill #01</h4>
+                            <p class="text-[10px] text-slate-500">Operational</p>
+                        </div>
+                    </div>
+                    <button class="text-xs text-slate-500 hover:text-white">Report</button>
+                </div>
+
+                <!-- Item -->
+                <div class="bg-[#1a1a1a] p-4 rounded-xl border border-white/5 flex items-center justify-between">
+                    <div class="flex items-center gap-3">
+                        <div
+                            class="w-10 h-10 rounded-full bg-[#22C55E]/10 text-[#22C55E] flex items-center justify-center">
+                            <iconify-icon icon="solar:check-circle-bold" width="20"></iconify-icon>
+                        </div>
+                        <div>
+                            <h4 class="text-sm font-bold text-white">Treadmill #02</h4>
+                            <p class="text-[10px] text-slate-500">Operational</p>
+                        </div>
+                    </div>
+                    <button class="text-xs text-slate-500 hover:text-white">Report</button>
+                </div>
+
+                <!-- Item (Maintenance) -->
+                <div
+                    class="bg-[#1a1a1a] p-4 rounded-xl border border-red-500/20 flex items-center justify-between shadow-[0_0_20px_rgba(239,68,68,0.1)]">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-full bg-red-500/10 text-red-500 flex items-center justify-center">
+                            <iconify-icon icon="solar:danger-triangle-bold" width="20"></iconify-icon>
+                        </div>
+                        <div>
+                            <h4 class="text-sm font-bold text-white">Cable Machine #04</h4>
+                            <p class="text-[10px] text-red-400">Broken Cable</p>
+                        </div>
+                    </div>
+                    <button
+                        class="text-xs font-bold text-white bg-red-500 px-3 py-1 rounded-md hover:bg-red-600 transition-colors">Fix</button>
+                </div>
+
+            </div>
+
+        </div>
+
+    </main>
+
+</body>
+
+</html>

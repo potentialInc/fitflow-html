@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FitFlow Admin - Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=DM+Sans:wght@400;500;700&display=swap"
+        rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        .font-dm-sans {
+            font-family: 'DM Sans', sans-serif !important;
+        }
+    </style>
+</head>
+
+<body class="bg-[#0f0f11] text-slate-300 font-inter h-screen flex overflow-hidden">
+
+    <!-- Sidebar -->
+    <aside class="w-64 bg-[#1a1a1a] border-r border-white/5 flex flex-col h-full">
+        <!-- Logo -->
+        <div class="h-16 flex items-center px-6 border-b border-white/5">
+            <div class="flex items-center gap-2 text-[#22C55E]">
+                <iconify-icon icon="solar:dumbbell-large-minimalistic-bold" width="24"></iconify-icon>
+                <span class="font-dm-sans font-bold text-xl text-white tracking-tight">FitFlow</span>
+            </div>
+        </div>
+
+        <!-- Nav -->
+        <nav class="flex-1 px-3 py-6 space-y-1">
+
+            <a href="admin-dashboard.html"
+                class="flex items-center gap-3 px-3 py-2.5 rounded-lg bg-[#22C55E]/10 text-[#22C55E] font-medium transition-colors">
+                <iconify-icon icon="solar:widget-linear" width="20"></iconify-icon>
+                Dashboard
+            </a>
+
+            <div class="pt-4 pb-2 px-3 text-[10px] font-bold text-slate-500 uppercase tracking-wider">Management</div>
+
+            <a href="users.html"
+                class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-400 hover:text-white hover:bg-white/5 transition-colors">
+                <iconify-icon icon="solar:users-group-rounded-linear" width="20"></iconify-icon>
+                Users & Roles
+            </a>
+
+            <a href="facility.html"
+                class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-400 hover:text-white hover:bg-white/5 transition-colors">
+                <iconify-icon icon="solar:buildings-linear" width="20"></iconify-icon>
+                Facility
+            </a>
+
+            <div class="pt-4 pb-2 px-3 text-[10px] font-bold text-slate-500 uppercase tracking-wider">Content</div>
+
+            <a href="content-cms.html"
+                class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-400 hover:text-white hover:bg-white/5 transition-colors">
+                <iconify-icon icon="solar:library-linear" width="20"></iconify-icon>
+                Content CMS
+            </a>
+
+            <div class="pt-4 pb-2 px-3 text-[10px] font-bold text-slate-500 uppercase tracking-wider">Analytics</div>
+
+            <a href="reports.html"
+                class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-400 hover:text-white hover:bg-white/5 transition-colors">
+                <iconify-icon icon="solar:chart-square-linear" width="20"></iconify-icon>
+                Reports
+            </a>
+
+        </nav>
+
+        <!-- Profile -->
+        <div class="p-4 border-t border-white/5">
+            <div class="flex items-center gap-3">
+                <img src="https://randomuser.me/api/portraits/men/4.jpg" class="w-9 h-9 rounded-full object-cover">
+                <div class="flex-1">
+                    <p class="text-sm font-bold text-white leading-tight">Admin User</p>
+                    <p class="text-[10px] text-slate-500">Super Admin</p>
+                </div>
+                <button class="text-slate-500 hover:text-white">
+                    <iconify-icon icon="solar:logout-2-linear" width="20"></iconify-icon>
+                </button>
+            </div>
+        </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="flex-1 flex flex-col overflow-hidden relative">
+
+        <!-- Top Bar -->
+        <header class="h-16 border-b border-white/5 bg-[#0f0f11] flex items-center justify-between px-8">
+            <h1 class="text-xl font-bold text-white font-dm-sans">Dashboard Overview</h1>
+
+            <div class="flex items-center gap-4">
+                <div class="relative">
+                    <iconify-icon icon="solar:magnifer-linear"
+                        class="absolute left-3 top-1/2 -translate-y-1/2 text-slate-500"></iconify-icon>
+                    <input type="text" placeholder="Search anything..."
+                        class="bg-[#1a1a1a] text-sm text-white pl-9 pr-4 py-2 rounded-lg border border-white/5 focus:outline-none focus:border-[#22C55E] w-64">
+                </div>
+                <button
+                    class="w-9 h-9 rounded-full bg-[#1a1a1a] border border-white/5 flex items-center justify-center text-slate-400 hover:text-white">
+                    <iconify-icon icon="solar:bell-linear" width="20"></iconify-icon>
+                </button>
+            </div>
+        </header>
+
+        <!-- Content Srcoll -->
+        <div class="flex-1 overflow-y-auto p-8">
+
+            <!-- KPI Cards -->
+            <div class="grid grid-cols-4 gap-6 mb-8">
+                <div class="bg-[#1a1a1a] p-6 rounded-2xl border border-white/5">
+                    <p class="text-sm text-slate-400 mb-2">Total Members</p>
+                    <p class="text-3xl font-bold text-white font-dm-sans">1,204</p>
+                    <div class="flex items-center gap-1 text-[#22C55E] text-xs font-bold mt-2">
+                        <iconify-icon icon="solar:graph-up-linear"></iconify-icon>
+                        +12% this month
+                    </div>
+                </div>
+                <div class="bg-[#1a1a1a] p-6 rounded-2xl border border-white/5">
+                    <p class="text-sm text-slate-400 mb-2">Active Trainers</p>
+                    <p class="text-3xl font-bold text-white font-dm-sans">48</p>
+                    <div class="flex items-center gap-1 text-[#22C55E] text-xs font-bold mt-2">
+                        <iconify-icon icon="solar:graph-up-linear"></iconify-icon>
+                        +3% this month
+                    </div>
+                </div>
+                <div class="bg-[#1a1a1a] p-6 rounded-2xl border border-white/5">
+                    <p class="text-sm text-slate-400 mb-2">Monthly Revenue</p>
+                    <p class="text-3xl font-bold text-white font-dm-sans">$98.5k</p>
+                    <div class="flex items-center gap-1 text-[#22C55E] text-xs font-bold mt-2">
+                        <iconify-icon icon="solar:graph-up-linear"></iconify-icon>
+                        +8% vs last month
+                    </div>
+                </div>
+                <div class="bg-[#1a1a1a] p-6 rounded-2xl border border-white/5">
+                    <p class="text-sm text-slate-400 mb-2">Occupancy Rate</p>
+                    <p class="text-3xl font-bold text-white font-dm-sans">76%</p>
+                    <div class="flex items-center gap-1 text-orange-500 text-xs font-bold mt-2">
+                        <iconify-icon icon="solar:graph-down-linear"></iconify-icon>
+                        -2% vs last week
+                    </div>
+                </div>
+            </div>
+
+            <!-- Charts Row (Placeholder) -->
+            <div class="grid grid-cols-3 gap-6 mb-8">
+                <div class="col-span-2 bg-[#1a1a1a] p-6 rounded-2xl border border-white/5 h-80 flex flex-col">
+                    <h3 class="text-lg font-bold text-white mb-6">Revenue Overview</h3>
+                    <!-- Mock Chart Bars -->
+                    <div class="flex-1 flex items-end justify-between gap-4 px-4 pb-2">
+                        <div class="w-full bg-[#252525] rounded-t-sm h-[40%] hover:bg-[#22C55E] transition-colors">
+                        </div>
+                        <div class="w-full bg-[#252525] rounded-t-sm h-[60%] hover:bg-[#22C55E] transition-colors">
+                        </div>
+                        <div class="w-full bg-[#252525] rounded-t-sm h-[55%] hover:bg-[#22C55E] transition-colors">
+                        </div>
+                        <div class="w-full bg-[#252525] rounded-t-sm h-[80%] hover:bg-[#22C55E] transition-colors">
+                        </div>
+                        <div class="w-full bg-[#252525] rounded-t-sm h-[70%] hover:bg-[#22C55E] transition-colors">
+                        </div>
+                        <div class="w-full bg-[#22C55E] rounded-t-sm h-[90%] shadow-[0_0_20px_rgba(34,197,94,0.3)]">
+                        </div>
+                    </div>
+                    <div class="flex justify-between text-xs text-slate-500 mt-2 px-2 uppercase font-mono">
+                        <span>Jul</span><span>Aug</span><span>Sep</span><span>Oct</span><span>Nov</span><span>Dec</span>
+                    </div>
+                </div>
+
+                <div class="bg-[#1a1a1a] p-6 rounded-2xl border border-white/5 h-80 flex flex-col">
+                    <h3 class="text-lg font-bold text-white mb-6">Member Distribution</h3>
+                    <div class="flex-1 flex items-center justify-center relative">
+                        <!-- Donut Chart Hack -->
+                        <div
+                            class="w-48 h-48 rounded-full border-[1.5rem] border-[#22C55E] border-r-blue-500 border-b-purple-500 rotate-45">
+                        </div>
+                        <div class="absolute inset-0 flex flex-col items-center justify-center">
+                            <span class="text-3xl font-bold text-white">1.2k</span>
+                            <span class="text-xs text-slate-500 uppercase">Total</span>
+                        </div>
+                    </div>
+                    <div class="flex justify-center gap-4 mt-2">
+                        <div class="flex items-center gap-2 text-xs text-slate-400">
+                            <div class="w-2 h-2 rounded-full bg-[#22C55E]"></div> Standard
+                        </div>
+                        <div class="flex items-center gap-2 text-xs text-slate-400">
+                            <div class="w-2 h-2 rounded-full bg-blue-500"></div> Premium
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Table Preview -->
+            <div class="bg-[#1a1a1a] rounded-2xl border border-white/5 overflow-hidden">
+                <div class="p-6 border-b border-white/5 flex justify-between items-center">
+                    <h3 class="text-lg font-bold text-white">Recent Signups</h3>
+                    <button class="text-sm font-medium text-[#22C55E] hover:underline">View All</button>
+                </div>
+                <table class="w-full text-left text-sm text-slate-400">
+                    <thead class="bg-black/20 text-xs uppercase font-bold text-slate-500">
+                        <tr>
+                            <th class="px-6 py-4">User</th>
+                            <th class="px-6 py-4">Plan</th>
+                            <th class="px-6 py-4">Date</th>
+                            <th class="px-6 py-4">Status</th>
+                            <th class="px-6 py-4 text-right">Amount</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-white/5">
+                        <tr class="hover:bg-white/5 transition-colors">
+                            <td class="px-6 py-4 flex items-center gap-3">
+                                <div class="w-8 h-8 rounded-full bg-slate-700"></div>
+                                <span class="text-white font-bold">John D.</span>
+                            </td>
+                            <td class="px-6 py-4">Standard Monthly</td>
+                            <td class="px-6 py-4">Jan 22, 2026</td>
+                            <td class="px-6 py-4"><span
+                                    class="bg-[#22C55E]/10 text-[#22C55E] px-2 py-0.5 rounded text-xs font-bold uppercase">Active</span>
+                            </td>
+                            <td class="px-6 py-4 text-right font-bold text-white">$29.99</td>
+                        </tr>
+                        <tr class="hover:bg-white/5 transition-colors">
+                            <td class="px-6 py-4 flex items-center gap-3">
+                                <div class="w-8 h-8 rounded-full bg-slate-700"></div>
+                                <span class="text-white font-bold">Sarah M.</span>
+                            </td>
+                            <td class="px-6 py-4">Premium Yearly</td>
+                            <td class="px-6 py-4">Jan 21, 2026</td>
+                            <td class="px-6 py-4"><span
+                                    class="bg-[#22C55E]/10 text-[#22C55E] px-2 py-0.5 rounded text-xs font-bold uppercase">Active</span>
+                            </td>
+                            <td class="px-6 py-4 text-right font-bold text-white">$299.99</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+
+    </main>
+
+</body>
+
+</html>
